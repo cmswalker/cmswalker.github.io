@@ -1,0 +1,19 @@
+{
+  "name": "startbootstrap-creative",
+  "version": "1.0.1",
+  "homepage": "https://github.com/IronSummitMedia/startbootstrap-creative",
+  "authors": [
+    "cmswalker <c.michael.s.walker@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome-animation": "~0.0.6"
+  }
+}
