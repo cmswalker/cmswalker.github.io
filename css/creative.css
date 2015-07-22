@@ -1,8 +1,4 @@
-/*!
- * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+
 
 html,
 body {
@@ -564,7 +560,7 @@ header .header-content {
 }
 
 #about_container {
-    margin-bottom: -10vh;
+    margin-bottom: -8vh;
 }
 
 #contact a {
@@ -573,16 +569,12 @@ header .header-content {
 
 #contact a:hover {
     color: RGBA(162, 197, 172, 1);
+    text-decoration: none;
 }
 
 #audio_list {
   list-style-type: none;
 }
-
-
-
-
-
 
 
 
