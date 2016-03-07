@@ -12,6 +12,14 @@ body {
 
 #logo_top {
   color: RGBA(162, 197, 172, 1);
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 6px;
+  padding-left: 1.75%;
+}
+
+#fixed-cloud {
+  width: 40px;
 }
 
 hr {
@@ -65,7 +73,8 @@ p {
 }
 
 section {
-    padding: 100px 0;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 
 aside {
@@ -526,13 +535,18 @@ header .header-content {
   font-family: 'Lato';
 }
 
+#js_logo {
+  max-height: 56px;
+  max-width: 56px;
+  margin-top: 3px;
+  margin-bottom: -3px;
+}
+
 #node_logo {
+  margin-top: -20px;
+  margin-bottom: -23px;
   height: 100px;
   width: 100px;
-  margin: 0 auto;
-  padding: 0;
-  margin-top: -2.25vh;
-  margin-bottom: -3.5vh;
 }
 
 #ugly_dog {
@@ -563,6 +577,10 @@ header .header-content {
     margin-bottom: -8vh;
 }
 
+#about {
+  padding-top: 0px;
+}
+
 #contact a {
     color: RGBA(115, 134, 115, 1);
 }
@@ -576,18 +594,10 @@ header .header-content {
   list-style-type: none;
 }
 
-.top_fa {
-  margin-top: 3vh;
-  margin-left: 15vw;
-  margin-right: 15vw;
-  margin-bottom: 0vh;
+#work-link {
+  color: inherit;
 }
 
-
-
-
-
-
-
-
-
+#portfolio, #experience {
+  padding: 0px;
+}

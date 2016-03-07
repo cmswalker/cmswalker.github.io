@@ -49,7 +49,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a id="logo_top" class="navbar-brand page-scroll" href="#page-top">m|w</a>
+                <a id="logo_top" class="navbar-brand page-scroll" target="_blank" href="https://www.youtube.com/watch?v=LfRNRymrv9k">
+                  <img id="fixed-cloud" src="img/rain_icon_green.png" />
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -59,10 +61,13 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Skills</a>
+                        <a class="page-scroll" href="#services">Current</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Projects</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#experience">Prior</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -81,7 +86,7 @@
                 <h1>Michael Walker</h1>
                 <hr>
                 <h2>full_stack_dev</h2>
-                <p>Oakland, CA</p>
+                <p>Oakland</p>
             </div>
         </div>
         <div id="gradient"></div>
@@ -92,12 +97,13 @@
         <div class="container" id="about_container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">About me</h2>
                     <hr class="light">
                     <p class="text-faded">
-                      Former Audio Engineer turned web developer.<br><br>
-                      ◆Full Stack Developer at Madison-Reed◆<br><br>
+                      Full Stack Developer<br>
+                      @ <a id="work-link" target="_blank" href="https://www.madison-reed.com/">Madison-Reed</a>
                     </p>
+
+                    <hr class="light">
 
                     <div id="about_me_icons" class="row">
                         <div class="col-lg-3 col-md-6 text-center">
@@ -136,7 +142,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Technical Skills</h2>
+                    <h2 class="section-heading">Current Stack</h2>
                     <hr class="primary">
                 </div>
             </div>
@@ -145,30 +151,30 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-diamond wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                        <h3>Ruby on Rails</h3>
-                        <p class="text-muted">Ruby, Rails, RSpec</p>
+                        <img id ="js_logo" class="fa fa-4x wow bounceIn text-primary" src="img/jslogo_copy.png" data-wow-delay=".3s"/>
+                        <h3>Javascript</h3>
+                        <p class="text-muted">ES 5/6-Angular 1/2-React-Flux-Webpack-Babel</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <img id="node_logo" class="fa fa-4x wow bounceIn text-primary" src="img/node_icon_copy.png" data-wow-delay=".3s">
                         <h3>Node.js</h3>
-                        <p class="text-muted">Javascript, Express, Jasmine</p>
+                        <p class="text-muted">Express-Jade-Mocha-Meteor-NPM</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-database wow bounceIn text-primary" data-wow-delay=".4s"></i>
-                        <h3>Database Tools</h3>
-                        <p class="text-muted">MongoDB, PostgreSQL, Mongoose.js, Active Record, Sequelize</p>
+                        <h3>DB Tools</h3>
+                        <p class="text-muted">MySQL-MongoDB-Redis-Firebase</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-suitcase wow bounceIn text-primary" data-wow-delay=".5s"></i>
-                        <h3>Other Skills</h3>
-                        <p class="text-muted">Git/GitHub, Heroku, jQuery, D3.js, API’s, Meteor.js, Web Scraping, Sass, Gulp, Responsive Design, Capybara</p>
+                        <h3>Other</h3>
+                        <p class="text-muted">Bash-Git-Travis-Jenkins-Stylus-Gulp-Ruby/Rails-Python-Prolog-Responsive Design-UX sympathizer</p>
                     </div>
                 </div>
             </div>
@@ -245,65 +251,58 @@
         </div>
     </section>
 
-    <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Experience</h2>
-                <hr class="light">
-                <h4>General Assembly</h4>
-                <p>
-                  Completed General Assembly's 12-week Full-Stack Web Development course covering:<br>JavaScript, Node, Ruby on Rails, Angular, API's, Testing, and HTML/CSS.
-                </p>
-                <hr>
-                <h4>House Audio Engineer/Production Manager</h4>
-                <p>
-                  House audio engineer and production manager for national touring artists and local events at various Seattle venues.  House-engineering positions held at Showbox Sodo, Neumo's, El Corazon, Studio Seven, and the historic Moore and Paramount theatres.
-                </p>
-                <hr>
-                <h4>Touring Audio Engineer</h4>
-                  <div id="audio_list">
-                    <li>The Jim Jones Revue - London, UK</li>
-                    <li>Kid Congo Powers & The Pink Monkeybirds - Washington D.C.</li>
-                    <li>The Butthole Surfers - Austin, TX</li>
-                  </div>
-            </div>
-        </div>
-    </aside>
+    <section id="experience">
+      <aside class="bg-dark">
+          <div class="container text-center">
+              <div class="call-to-action">
+                  <h2>Experience</h2>
+                  <hr class="light">
+                  <h4>General Assembly</h4>
+                  <p>
+                    Completed General Assembly's 12-week Full-Stack Web Development course covering:<br>JavaScript, Node, Express, Ruby on Rails, Angular, CRUD/REST/API's, Testing, and HTML/CSS.
+                  </p>
+                  <hr>
+                  <h4>House Audio Engineer/Production Manager</h4>
+                  <p>
+                    Audio engineer and production manager for national touring artists. House positions held @ Showbox Sodo, Neumo's, El Corazon and the historic Moore and Paramount theatres.
+                  </p>
+                  <hr>
+                  <h4>Touring Engineer</h4>
+                    <div id="audio_list">
+                      <li>The Jim Jones Revue - London</li>
+                      <li>Kid Congo Powers & The Pink Monkeybirds - D.C.</li>
+                      <li>The Butthole Surfers - Austin</li>
+                    </div>
+              </div>
+          </div>
+      </aside>
+    </section>
 
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Find me</h2>
+                    <h2 class="section-heading">Find</h2>
                     <hr class="primary">
-                    <p>
-                      &nbsp;
-                    </p>
+                    <div>&nbsp;</div>
                 </div>
-                <div class="col-lg-4 text-center">
-                    <a href="tel:+14798317887"><i class="fa fa-mobile fa-3x wow bounceIn"></i>
-                    <p>479.831.7887</p>
-                    </a>
-                </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-xs-12 col-lg-4 text-center">
                     <a href="mailto:c.michael.s.walker@gmail.com"><i class="fa fa-paper-plane fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p>c.michael.s.walker@gmail.com</p>
+                    <p>cmichaelswalker@gmail.com</p>
                     </a>
                 </div>
-                <div class="col-lg-4 text-center">
-                      <a href="https://instagram.com/walkerrrrz/">
-                        <i class="fa fa-instagram fa-3x wow bounceIn" data-wow-delay=".3s"></i>
-                        <p>@walkerrrrz</p>
-                      </a>
+                <div>&nbsp;</div>
+                <div class="col-xs-12 col-lg-4 text-center">
+                    <a target="_blank" href="https://github.com/cmswalker">
+                        <i class="fa fa-3x fa-github top_fa"></i>
+                    </a>
                 </div>
-            </div>
-            <div class="row text-center">
-            <a href="https://github.com/cmswalker" target="_blank">
-                <i class="fa fa-3x fa-github top_fa"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/cmswalker" target="_blank">
-                <i class="fa fa-3x fa-linkedin top_fa"></i>
-            </a>
+                <div>&nbsp;</div>
+                <div class="col-xs-12 col-lg-4 text-center">
+                    <a target="_blank" href="https://instagram.com/huskyjeans/">
+                      <i class="fa fa-instagram fa-3x wow bounceIn" data-wow-delay=".3s"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
