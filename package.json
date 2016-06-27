@@ -1,0 +1,22 @@
+{
+  "name": "cmswalker.github.io",
+  "version": "1.0.0",
+  "description": "personal site",
+  "main": "index.js",
+  "scripts": {
+    "test": "test suite here"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmswalker/cmswalker.github.io.git"
+  },
+  "author": "cmswalker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmswalker/cmswalker.github.io/issues"
+  },
+  "homepage": "https://github.com/cmswalker/cmswalker.github.io#readme",
+  "dependencies": {
+    "fullpage": "^1.4.2"
+  }
+}
