@@ -1,3 +1,12 @@
+
+/*web 2.2 coolors*/
+/*mw-fog #ECF8F8*/
+/*mw-gray #1C1D25*/
+/*mw-cream #E7D8C9*/
+/*mw-salmon #E6BEAE*/
+/*mw-green #A2C5AC*/
+
+
 html *
 {
    font-family: Hind;
@@ -33,6 +42,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .page3 {
   background-color: blue;
+}
+
+.link {
+
 }
 
 /** {

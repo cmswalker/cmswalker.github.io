@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="bower_components/font-awesome-animation/dist/font-awesome-animation.min.css">
     <!-- Plugin CSS -->
     <!-- <link rel="stylesheet" href="css/animate.min.css" type="text/css"> -->
-    <link rel="stylesheet" href="node_modules/fullpage/build/fullpage.css" type="text/css">
+    <!-- <link rel="stylesheet" href="node_modules/fullpage/build/fullpage.css" type="text/css"> -->
     <link rel="stylesheet" href="css/custom.css" type="text/css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.1/jquery.fullPage.js"></script>
@@ -42,16 +42,51 @@
 
 
   <div id="fullpage">
-    <div class="section page1" data-anchor="page1">Slider plugin</div>
-    <div class="section page2" data-anchor="page2">Vanilla JS</div>
-    <div class="section page3" data-anchor="page3">Made with ♥ by vanderlanth</div>
+
+    <div class="section page1 container-fluid" data-anchor="page1">Welcome/fun icons
+        <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+                
+                <p>
+                  fullStackDev<br>
+                  @ <a class="link" target="_blank" href="https://www.madison-reed.com/">Madison-Reed</a>
+                </p>
+                <hr class="light">
+
+                <div class="row about-icons">
+                    <div class="col-xs-6 col-md-3">                        
+                        <i class="fa fa-4x fa-headphones faa-tada animated faa-slow wow bounceIn" data-wow-delay=".6s"></i>
+                        <h3>Ex-Audio Engineer</h3>                        
+                    </div>
+                    <div class="col-xs-6 col-md-3">                        
+                        <i id="umbrella" class="fa fa-4x fa-code-fork faa-wrench animated faa-slow wow bounceIn" data-wow-delay=".5s"></i>
+                        <h3>Open Source Contributor</h3>                        
+                    </div>
+                    <div class="col-xs-6 col-md-3">                        
+                        <i id="cocktail_glass" class="fa fa-4x fa-glass faa-passing animated faa-slow wow bounceIn" data-wow-delay=".7s"></i>
+                        <h3>Occasional Bartender</h3>                        
+                    </div>
+                    <div class="col-xs-6 col-md-3">                        
+                        <img id="ugly_dog" class="fa fa-4x faa-ring animated faa-slow wow bounceIn" src="img/ugly_dog_white.png" data-wow-delay=".8s">
+                        <h3>Ugly Dog Specialist</h3>                        
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="section page2" data-anchor="page2">Current Stack</div>
+    <div class="section page3" data-anchor="page3">Open Source + links to github/npm</div>
+    <div class="section page4" data-anchor="page4">contact</div>
   </div>
 
-  <div id="sidebar">
-    <i class="fa fa-circle-o" aria-hidden="true"></i>
-    <a data-menuanchor="page1" href="#page1">hithere</a>
-    <a data-menuanchor="page2" href="#page2">hithere</a>
-    <a data-menuanchor="page3" href="#page3">hithere</a>
+  <div id="sidebar">    
+    <i class="fa fa-circle" aria-hidden="true"></i>
+    <a data-menuanchor="page1" href="#page1"><i class="fa fa-circle-thin" aria-hidden="true"></i></a>
+    <a data-menuanchor="page2" href="#page2"><i class="fa fa-circle-thin" aria-hidden="true"></i></a>
+    <a data-menuanchor="page3" href="#page3"><i class="fa fa-circle-thin" aria-hidden="true"></i></a>
   </div>
 </body>
 
