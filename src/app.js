@@ -1,6 +1,7 @@
 const React = require('react');
 
 const {Fullpage, Slide, TopNav, SideNav} = require('fullpage-react');
+import { Grid, Row, Col, Button } from 'react-bootstrap';
 require('normalize.css');
 require('./styles/main.styl');
 
@@ -80,13 +81,20 @@ class FullpageReact extends React.Component {
 
         <TopNav className="topNav" {...topNavOptions}>
           {navArr.map((n, idx) => {
-            return <span key={idx} ref={idx} style={this.compareStyles(topNavOptions, idx)}
-              onMouseOver={() => this.onMouseOver(idx)} onMouseOut={() => this.onMouseOut(idx)}>Slide {idx}</span>
+            return <Button key={idx} ref={idx} style={this.compareStyles(topNavOptions, idx)}
+              onMouseOver={() => this.onMouseOver(idx)} onMouseOut={() => this.onMouseOut(idx)}>Slide {idx}</Button>
           }, this)}
         </TopNav>
 
         <Slide id="slide1" className="slide turtle-b">          
           <div id="title">Title Here</div>
+          <Grid>
+            <Row>
+              <Col xs={12}>In Row</Col>
+              <Col xs={12} md={6}>Col 1</Col>
+              <Col xs={12} md={6}>Col 2</Col>
+            </Row>
+          </Grid>
         </Slide>
         <Slide id="slide2" className="slide coal-b">
           <div className="arrow-up arrow-up-1 abs-top top-100"></div>
