@@ -87,29 +87,40 @@ class FullpageReact extends React.Component {
         </TopNav>
 
         <Slide id="slide1" className="slide turtle-b">          
-          <div id="title">Title Here</div>
-          <Grid>
-            <Row>
-              <Col xs={12}>In Row</Col>
-              <Col xs={12} md={6}>Col 1</Col>
-              <Col xs={12} md={6}>Col 2</Col>
-            </Row>
-          </Grid>
+          <div className="title">Yooooo</div>          
+          <h1 className="name">Michael Walker</h1>
+          <h2 className="current-title">Full Stack Dev</h2>
+          <h2 className="current-city">Oakland</h2>
+          <h2 className="current-employer">Currently @ <a href="www.madison-reed.com">Madison Reed</a></h2>          
         </Slide>
         <Slide id="slide2" className="slide coal-b">
           <div className="arrow-up arrow-up-1 abs-top top-100"></div>
-          <div id="title">Work</div>
+          <div className="title">Interests</div>
+          <Grid>
+            <Row>              
+              <Col xs={6}>Col 1</Col>
+              <Col xs={6}>Col 2</Col>
+            </Row>
+          </Grid>
         </Slide>
         <Slide id="slide3" className="slide canary-b">
           <div className="arrow-up arrow-up-2 abs-top top-200"></div>
-          <div id="title">
-            Open Source? interests?                      
-          </div>          
+          <div className="title">Current Stack</div>
+          <Grid>
+            <Row>              
+              <Col xs={6}>Box 1</Col>
+              <Col xs={6}>Box 2</Col>
+            </Row>
+            <Row>              
+              <Col xs={6}>Box 3</Col>
+              <Col xs={6}>Box 4</Col>
+            </Row>
+          </Grid>
         </Slide>
         <Slide id="slide4" className="slide metal-b">
           <div className="arrow-up arrow-up-3 abs-top top-300"></div>
-          <div id="title">
-            Contact
+          <div className="title">
+            Contact            
           </div>          
         </Slide>
 
