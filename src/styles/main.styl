@@ -74,6 +74,10 @@ mq-max = s(mq-query-min-fstr, bp-desktop-max)
 body
   text-align center
   font-family font-family-primary
+  .font-primary 
+    font-family font-family-primary
+  .font-mont 
+    font-family Montserrat
   a
     color $fog
     &:hover
@@ -147,27 +151,20 @@ body
       width 8vw
       margin-top 0px
       max-width 117px
-        
-  .lacroix
+
+  .main-title
     @media mq-mobile
-      width 30vw
-    @media (min-width: bp-desktop-max)
-      max-width 116px
-      
-  .lacroix-pair
-    @media mq-mobile
-      font-size 28vw
-
-
-
-
-
+      font-size 23vw
     
-  .main-slide
+  .main-slide    
     .name
       font-size 5vw
+      @media mq-mobile
+       font-size 7.5vw
     .current-title, .current-city, .current-employer
       font-size 3vw
+      @media mq-mobile
+        font-size 7vw
     .current-title
       font-family Montserrat
       color $fog
@@ -177,6 +174,9 @@ body
       font-size 2.5vw
       a
         font-family font-family-primary
+        
+      @media mq-mobile
+        font-size 5.5vw
 
   .current-stack
     color $turtle
@@ -192,7 +192,6 @@ body
 
   .interests
     color $coal
-    text-align center
     a
       font-family Montserrat
     a:hover
@@ -201,11 +200,39 @@ body
       .oss
         font-family Montserrat
         
+    .related-interests
+      text-align left
+    .not-interests
+      text-align right
+        
     h2
       margin-bottom 7%
+      @media (max-width: bp-tablet-max)
+        display inline
+        &::before
+          content "\00a0\00a0";
+          
+    .lacroix
+      @media mq-mobile
+        width 30vw
+      @media (min-width: bp-desktop-max)
+        max-width 116px
+        
+    .lacroix-pair
+      @media mq-mobile
+        font-size 25vw
 
   .contact
     color $canary
+    text-align center
+    a
+      font-family Montserrat
+      
+    .col-xs-12
+      height 18vh
+
+
+
 
   .arrow-up
   .arrow-down
@@ -281,12 +308,12 @@ body
     background-color $metal
     
 //Nav
-  .topNav
-    display block
-    @media mq-mobile
-      display none
-  .sideNav
-    display block
+.topNav
+  display block
+  @media mq-mobile
+    display none
+.sideNav
+  display block
     
 
 //hiders

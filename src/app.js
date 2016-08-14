@@ -90,7 +90,7 @@ class FullpageReact extends React.Component {
         </TopNav>
 
         <Slide id="slide1" className="slide turtle-b">
-          <div className="title">Yooooo</div>          
+          <div className="title main-title">Yooooo</div>          
           <Grid className="main-slide">
             <h1 className="name upper">Michael Walker</h1>
             <h2 className="current-title">Full Stack Dev</h2>
@@ -133,7 +133,7 @@ class FullpageReact extends React.Component {
           <div className="sub-title">Interests</div>
           <Grid className="interests">
             <Row>              
-              <Col className="int-col" xs={12} md={6}>
+              <Col className="int-col related-interests" xs={12} md={6}>
                 <i className="fa fa-code lacroix-pair" aria-hidden="true"></i>                
                 <h2 className="upper">Related</h2>
                 <p>                 
@@ -146,8 +146,7 @@ class FullpageReact extends React.Component {
                  Bots<br/>
                 </p>
               </Col>              
-              <Col className="int-col" xs={12} md={6}>
-                <hr className="md-hide"/>
+              <Col className="int-col not-interests" xs={12} md={6}>
                 <img className="img-icon lacroix" src="./websiteImages/laCroixIcon.png"></img>               
                 <h2 className="upper">Not</h2>
                 <p>
@@ -163,7 +162,24 @@ class FullpageReact extends React.Component {
           <div className="arrow-up arrow-up-3 abs-top top-300"></div>
           <div className="sub-title">Contact</div>
           <Grid className="contact">
-            hello world
+            <Row>
+              <Col xs={12}>
+                <a href="mailto:c.michael.s.walker@gmail.com"><i className="fa fa-paper-plane"></i>
+                  <p>
+                    <span className="email font-mont">cmichaelswalker@gmail.com</span>
+                  </p>
+                </a>
+              </Col>
+              <Col xs={12}>
+                <a href="https://www.instagram.com/huskyjeans1738/"><i className="fa fa-instagram"></i></a>
+              </Col>
+              <Col xs={12}>
+                <a href="https://github.com/cmswalker"><i className="fa fa-github"></i></a>
+              </Col>
+              <Col xs={12}>
+                <a href="https://www.npmjs.com/~cmswalker">npm</a>
+              </Col>
+            </Row>
           </Grid>
         </Slide>
 
