@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Montserrat';  
+  src: url('../../assets/fonts/MontSerrat.woff2') format('woff2')       
+  font-weight: normal;
+  font-style: normal;
+}
+
 $arrowPx = 50px
 
 $metal = #AEB7B3
@@ -72,7 +79,14 @@ body
   text-align center
   font-family font-family-primary
   a
-    color $ice
+    color $fog
+    &:hover
+      color $canary
+      text-decoration none
+    &:visited
+      color $fog !important
+      text-decoration none !important
+
   div.slide
     font-size 1em
     @media mq-mobile
@@ -87,12 +101,27 @@ body
       font-size 6vw
 
   .title
+    font-family Montserrat
     color $fog
     font-size 2em
     padding-top 5vw
+    
+  .subtitle
+    font-family MontSerrat
+    color $fog
+    font-size 1.25em
       
   .name
     font-size 1em
+    
+  .current-stack
+    color $turtle
+    
+  .interests
+    color $coal
+    
+  .contact
+    color $canary
 
   .arrow-up
   .arrow-down

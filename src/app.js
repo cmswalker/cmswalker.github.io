@@ -2,6 +2,8 @@ const React = require('react');
 
 const {Fullpage, Slide, TopNav, SideNav} = require('fullpage-react');
 import { Grid, Row, Col, Button } from 'react-bootstrap';
+
+require('../assets/fonts/MontSerrat.woff2');
 require('normalize.css');
 require('./styles/main.styl');
 
@@ -87,26 +89,18 @@ class FullpageReact extends React.Component {
         </TopNav>
 
         <Slide id="slide1" className="slide turtle-b">          
-          <div className="title">Yooooo</div>          
-          <h1 className="name">Michael Walker</h1>
-          <h2 className="current-title">Full Stack Dev</h2>
-          <h2 className="current-city">Oakland</h2>
-          <h2 className="current-employer">Currently @ <a href="www.madison-reed.com">Madison Reed</a></h2>          
+          <div className="title">Yooooo</div>
+          <Grid className="main-slide">
+            <h1 className="name">Michael Walker</h1>
+            <h2 className="current-title">Full Stack Dev</h2>
+            <h2 className="current-city">Oakland</h2>
+            <h2 className="current-employer">Currently @ <a href="https://www.madison-reed.com">Madison Reed</a></h2>
+          </Grid>          
         </Slide>
         <Slide id="slide2" className="slide coal-b">
           <div className="arrow-up arrow-up-1 abs-top top-100"></div>
-          <div className="title">Interests</div>
-          <Grid>
-            <Row>              
-              <Col xs={6}>Col 1</Col>
-              <Col xs={6}>Col 2</Col>
-            </Row>
-          </Grid>
-        </Slide>
-        <Slide id="slide3" className="slide canary-b">
-          <div className="arrow-up arrow-up-2 abs-top top-200"></div>
           <div className="title">Current Stack</div>
-          <Grid>
+          <Grid className="current-stack">
             <Row>              
               <Col xs={6}>Box 1</Col>
               <Col xs={6}>Box 2</Col>
@@ -117,11 +111,22 @@ class FullpageReact extends React.Component {
             </Row>
           </Grid>
         </Slide>
+        <Slide id="slide3" className="slide canary-b">
+          <div className="arrow-up arrow-up-2 abs-top top-200"></div>
+          <div className="title">Interests</div>
+          <Grid className="interests">
+            <Row>              
+              <Col xs={6}>Col 1</Col>
+              <Col xs={6}>Col 2</Col>
+            </Row>
+          </Grid>
+        </Slide>
         <Slide id="slide4" className="slide metal-b">
           <div className="arrow-up arrow-up-3 abs-top top-300"></div>
-          <div className="title">
-            Contact            
-          </div>          
+          <div className="title">Contact</div>
+          <Grid className="contact">
+            hello world
+          </Grid>
         </Slide>
 
         <SideNav className="sideNav" {...sideNavOptions}>          
