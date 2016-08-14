@@ -1,6 +1,6 @@
 const React = require('react');
 
-const {Fullpage, Slide, TopNav, SideNav} = require('fullpage-react');
+const {Fullpage, Slide, SideNav} = require('fullpage-react');
 import { Grid, Row, Col, Button } from 'react-bootstrap';
 
 require('../assets/fonts/MontSerrat.woff2');
@@ -18,16 +18,6 @@ let fullPageOptions = {
   sensitivity: 100
 };
 
-let topNavOptions = {
-  footer: false, //topNav can double as a footer if true
-  align: 'left', //also supports center and right alignment
-
-  //styles to apply to children
-  activeStyles: {backgroundColor: 'white'},
-  hoverStyles: {backgroundColor: 'yellow'},
-  nonActiveStyles: {backgroundColor: 'gray'}
-};
-
 // all children are spans by default, for stacked buttons,
 // just wrap your nested components/buttons in divs
 let sideNavOptions = {
@@ -35,8 +25,8 @@ let sideNavOptions = {
   top: '50%', //top is 50% by default
 
   //styles to apply to children
-  activeStyles: {color: 'white'},
-  hoverStyles: {color: 'yellow'},
+  activeStyles: {color: '#E1EFE6'},
+  hoverStyles: {color: '#EFCB68'},
   nonActiveStyles: {color: 'gray'}
 };
 
@@ -81,13 +71,6 @@ class FullpageReact extends React.Component {
 
     return (
       <Fullpage active={this.updateActiveState}>
-
-        <TopNav className="topNav" {...topNavOptions}>
-          {navArr.map((n, idx) => {
-            return <Button key={idx} ref={idx} style={this.compareStyles(topNavOptions, idx)}
-              onMouseOver={() => this.onMouseOver(idx)} onMouseOut={() => this.onMouseOut(idx)}>Slide {idx}</Button>
-          }, this)}
-        </TopNav>
 
         <Slide id="slide1" className="slide turtle-b">
           <div className="title main-title">Yooooo</div>          
@@ -164,11 +147,7 @@ class FullpageReact extends React.Component {
           <Grid className="contact">
             <Row>
               <Col xs={12}>
-                <a href="mailto:c.michael.s.walker@gmail.com"><i className="fa fa-paper-plane"></i>
-                  <p>
-                    <span className="email font-mont">cmichaelswalker@gmail.com</span>
-                  </p>
-                </a>
+                <a href="mailto:c.michael.s.walker@gmail.com"><i className="fa fa-paper-plane"></i></a>
               </Col>
               <Col xs={12}>
                 <a href="https://www.instagram.com/huskyjeans1738/"><i className="fa fa-instagram"></i></a>
