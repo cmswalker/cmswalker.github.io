@@ -4,6 +4,7 @@ const {Fullpage, Slide, TopNav, SideNav} = require('fullpage-react');
 import { Grid, Row, Col, Button } from 'react-bootstrap';
 
 require('../assets/fonts/MontSerrat.woff2');
+require('./styles/font-awesome.min.css');
 require('normalize.css');
 require('./styles/main.styl');
 
@@ -88,42 +89,79 @@ class FullpageReact extends React.Component {
           }, this)}
         </TopNav>
 
-        <Slide id="slide1" className="slide turtle-b">          
-          <div className="title">Yooooo</div>
+        <Slide id="slide1" className="slide turtle-b">
+          <div className="title">Yooooo</div>          
           <Grid className="main-slide">
-            <h1 className="name">Michael Walker</h1>
+            <h1 className="name upper">Michael Walker</h1>
             <h2 className="current-title">Full Stack Dev</h2>
-            <h2 className="current-city">Oakland</h2>
-            <h2 className="current-employer">Currently @ <a href="https://www.madison-reed.com">Madison Reed</a></h2>
+            <h2 className="current-city upper">Oakland <i className="fa fa-shopping-cart" aria-hidden="true"></i></h2>
+            <h2 className="current-employer">Currently @ <a target="_blank" href="https://www.madison-reed.com">Madison Reed</a></h2>            
           </Grid>          
         </Slide>
         <Slide id="slide2" className="slide coal-b">
           <div className="arrow-up arrow-up-1 abs-top top-100"></div>
-          <div className="title">Current Stack</div>
+          <div className="sub-title">Current Tools</div>
           <Grid className="current-stack">
-            <Row>              
-              <Col xs={6}>Box 1</Col>
-              <Col xs={6}>Box 2</Col>
+            <Row>
+              <Col className="box" xs={6}>
+                <img className="img-icon" src="./websiteImages/node-icon.png"></img>
+                <h2 className="upper">Dev</h2>
+                <p>Javascript, Node.js, NPM, Express, Angular, React, Electron, Babel, Mocha</p>
+              </Col>
+              <Col className="box" xs={6}>                
+                <i className="fa fa-database" aria-hidden="true"></i>
+                <h2 className="upper">Data</h2>
+                <p>MySQL, MongoDB, Elasticsearch, Redis, Segment, Snowflake</p>
+              </Col>
             </Row>
-            <Row>              
-              <Col xs={6}>Box 3</Col>
-              <Col xs={6}>Box 4</Col>
+            <Row>
+              <Col className="box" xs={6}>
+                <i className="fa fa-wrench" aria-hidden="true"></i>                
+                <h2 className="upper">Build</h2>
+                <p>AWS, Git, Webpack, Gulp, Jenkins, Travis</p>
+              </Col>
+              <Col className="box" xs={6}>
+                <i className="fa fa-suitcase" aria-hidden="true"></i>
+                <h2 className="upper">Other</h2>
+                <p>A|B Testing, UX, Bash, Ruby, Rails, Python</p>
+              </Col>
             </Row>
           </Grid>
         </Slide>
         <Slide id="slide3" className="slide canary-b">
           <div className="arrow-up arrow-up-2 abs-top top-200"></div>
-          <div className="title">Interests</div>
+          <div className="sub-title">Interests</div>
           <Grid className="interests">
             <Row>              
-              <Col xs={6}>Col 1</Col>
-              <Col xs={6}>Col 2</Col>
+              <Col className="int-col" xs={12} md={6}>
+                <i className="fa fa-code lacroix-pair" aria-hidden="true"></i>                
+                <h2 className="upper">Related</h2>
+                <p>                 
+                <span className="oss">Open Source</span> <i className="fa fa-caret-down" aria-hidden="true"></i><br/>
+                 <a target="_blank" href="https://www.npmjs.com/~cmswalker">npm</a><br/>
+                 <a target="_blank" href="https://github.com/cmswalker">GitHub</a><br/>
+                 Anything Javascript<br/>
+                 Good Documentation<br/>                 
+                 Crons<br/>
+                 Bots<br/>
+                </p>
+              </Col>              
+              <Col className="int-col" xs={12} md={6}>
+                <hr className="md-hide"/>
+                <img className="img-icon lacroix" src="./websiteImages/laCroixIcon.png"></img>               
+                <h2 className="upper">Not</h2>
+                <p>
+                 La Croix<br/>
+                 Ugly Dogs<br/>
+                 <a target="_blank" href="https://www.instagram.com/p/BG2SVBHy5Gg/?taken-by=huskyjeans1738&hl=en">Proud Father</a>
+                </p>
+              </Col>
             </Row>
           </Grid>
         </Slide>
         <Slide id="slide4" className="slide metal-b">
           <div className="arrow-up arrow-up-3 abs-top top-300"></div>
-          <div className="title">Contact</div>
+          <div className="sub-title">Contact</div>
           <Grid className="contact">
             hello world
           </Grid>

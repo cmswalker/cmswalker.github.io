@@ -5,7 +5,21 @@
   font-style: normal;
 }
 
-$arrowPx = 50px
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.eot');
+  src: url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+       url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.woff2') format('woff2'),
+       url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.woff') format('woff'),
+       url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.ttf') format('truetype'),
+       url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$arrowPx = 10vh
 
 $metal = #AEB7B3
 $canary = #EFCB68
@@ -16,19 +30,6 @@ $turtle = #19D2AE
 // Typography
 // -------------------------
 font-family-primary = "Helvetica Neue", Helvetica, Arial, sans-serif;
-// font-family-primary-extra-thin-italic = 'Averta-ExtrathinItalic', sans-serif
-// font-family-primary-thin = 'Averta-Thin', sans-serif
-// font-family-primary-thin-italic = 'Averta-ThinItalic', sans-serif
-// font-family-primary-light = 'Averta-Light', sans-serif
-// font-family-primary-light-italic = 'Averta-LightItalic', sans-serif
-// font-family-primary-regular = 'Averta-Regular', sans-serif
-// font-family-primary-regular-italic = 'Averta-RegularItalic', sans-serif
-// font-family-primary-semi-bold = 'Averta-Semibold', sans-serif
-// font-family-primary-semi-bold-italic = 'Averta-SemiboldItalic', sans-serif
-// font-family-primary-bold = 'Averta-Bold', sans-serif
-// font-family-primary-bold-italic = 'Averta-BoldItalic', sans-serif
-// font-family-primary-extra-bold = 'Averta-ExtraBold', sans-serif
-// font-family-primary-extra-bold-italic = 'Averta-ExtraBoldItalic', sans-serif
 
 font-size-xxsmall = 10px
 font-size-xsmall = 12px
@@ -48,20 +49,15 @@ font-size-billboard = 128px
 
 // MEDIA QUERIES AND BREAKPOINTS
 bp-mobile-min = 320px
-bp-mobile-tweak-lower-max = 439px
-bp-mobile-tweak = 440px
 bp-mobile-max = 559px
+
 bp-tablet-min = 560px
-bp-tablet-tweak-lower-max = 659px
-bp-tablet-tweak = 660px
-bp-tablet-max = 759px
-bp-desktop-md-min = 760px
-bp-desktop-md-tweak-lower-max = 859px
-bp-desktop-md-tweak = 860px
+bp-tablet-max = 769px
+
+bp-desktop-md-min = 770px
 bp-desktop-md-max = 959px
+
 bp-desktop-min = 960px
-bp-desktop-tweak-lower-max = 1079px
-bp-desktop-tweak = 1080px
 bp-desktop-max = 1300px
 
 // media query formatting strings... use with built-in s() function
@@ -83,11 +79,14 @@ body
     &:hover
       color $canary
       text-decoration none
-    &:visited
-      color $fog !important
+    &:visited      
       text-decoration none !important
-
-  div.slide
+      
+  div.slide 
+    padding-left 2%
+    padding-right 2%
+    
+  div.slide, h1
     font-size 1em
     @media mq-mobile
       font-size 10vw
@@ -98,28 +97,113 @@ body
     @media mq-desktop
       font-size 8vw
     @media mq-max
-      font-size 6vw
+      font-size 90px
+  
+  h2
+    @media mq-mobile
+      font-size 7vw
+    @media mq-tablet
+      font-size 7vw
+    @media mq-desktop-md
+      font-size 5vw
+    @media mq-desktop
+      font-size 5vw
+    @media mq-max
+      font-size 53px
+        
+  p
+    @media mq-mobile
+      font-size 5vw
+    @media mq-tablet
+      font-size 5vw
+    @media mq-desktop-md
+      font-size 4vw
+    @media mq-desktop
+      font-size 4vw
+    @media mq-max
+      font-size 43px
 
-  .title
+  .title, .sub-title
     font-family Montserrat
     color $fog
     font-size 2em
-    padding-top 5vw
-    
-  .subtitle
-    font-family MontSerrat
-    color $fog
+    padding-top 10vh
+
+  .sub-title    
     font-size 1.25em
-      
-  .name
-    font-size 1em
+    margin-bottom 4%
+    padding-top 15vh
+
+  .upper
+    text-transform uppercase
     
+  .img-icon
+    width 11vw
+    margin-top -1vw
+    
+    @media (min-width: bp-desktop-md-min)
+      width 9vw
+    @media mq-max 
+      width 8vw
+      margin-top 0px
+      max-width 117px
+        
+  .lacroix
+    @media mq-mobile
+      width 30vw
+    @media (min-width: bp-desktop-max)
+      max-width 116px
+      
+  .lacroix-pair
+    @media mq-mobile
+      font-size 28vw
+
+
+
+
+
+    
+  .main-slide
+    .name
+      font-size 5vw
+    .current-title, .current-city, .current-employer
+      font-size 3vw
+    .current-title
+      font-family Montserrat
+      color $fog
+    .current-employer
+      margin-top 10%
+      font-family Montserrat
+      font-size 2.5vw
+      a
+        font-family font-family-primary
+
   .current-stack
     color $turtle
-    
+    .box
+      text-align left   
+      height 34vh
+      max-height 450px
+
+      h2        
+        display inline
+        &::before
+          content "\00a0\00a0";
+
   .interests
     color $coal
-    
+    text-align center
+    a
+      font-family Montserrat
+    a:hover
+      color $metal
+    .int-col
+      .oss
+        font-family Montserrat
+        
+    h2
+      margin-bottom 7%
+
   .contact
     color $canary
 
@@ -199,5 +283,13 @@ body
 //Nav
   .topNav
     display block
+    @media mq-mobile
+      display none
   .sideNav
     display block
+    
+
+//hiders
+.md-hide
+  @media (min-width: bp-desktop-md-min)
+    display none
