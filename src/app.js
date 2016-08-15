@@ -116,7 +116,7 @@ class FullpageReact extends React.Component {
           <div className="sub-title">Interests</div>
           <Grid className="interests">
             <Row>              
-              <Col className="int-col related-interests" xs={12} md={6}>
+              <Col className="int-col related-interests" xs={12} sm={6}>
                 <i className="fa fa-code lacroix-pair" aria-hidden="true"></i>                
                 <h2 className="upper">Related</h2>
                 <p>                 
@@ -129,7 +129,7 @@ class FullpageReact extends React.Component {
                  Bots<br/>
                 </p>
               </Col>
-              <Col className="int-col not-interests" xs={12} md={6}>
+              <Col className="int-col not-interests" xs={12} sm={6}>
                 <img className="img-icon lacroix" src="./assets/images/laCroixIcon.png"></img>               
                 <h2 className="upper">Not</h2>
                 <p>
