@@ -4,7 +4,7 @@ module.exports = {
   entry: path.join(__dirname, '/src/index.js'),
   output: {
     path: './js',
-    publicPath: '/js',
+    publicPath: './js',
     filename: 'bundle.js'
   },
   devServer: {
