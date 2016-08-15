@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: path.join(__dirname, '/src/index.js'),
+  //TODO: publicPath of ./js interferes with fonts
   output: {
     path: './js',
     publicPath: './js',
@@ -25,7 +26,7 @@ module.exports = {
       { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'file?name=assets/fonts/[name].[ext]'
+        loader: 'file?name=/assets/fonts/[name].[ext]'
       }
     ]
   }

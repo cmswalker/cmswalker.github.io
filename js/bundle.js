@@ -41809,7 +41809,7 @@
 /* 443 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "assets/fonts/MontSerrat.woff2";
+	module.exports = __webpack_require__.p + "/assets/fonts/MontSerrat.woff2";
 
 /***/ },
 /* 444 */
