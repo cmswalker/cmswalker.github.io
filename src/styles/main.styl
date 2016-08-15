@@ -1,0 +1,338 @@
+@font-face {
+  font-family: 'Montserrat';  
+  src: url('../../assets/fonts/MontSerrat.woff2') format('woff2')       
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.eot');
+  src: url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+       url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.woff2') format('woff2'),
+       url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.woff') format('woff'),
+       url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.ttf') format('truetype'),
+       url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$arrowPx = 10vh
+
+$metal = #AEB7B3
+$canary = #EFCB68
+$fog = #E1EFE6
+$coal = #16302B
+$turtle = #19D2AE
+
+// Typography
+// -------------------------
+font-family-primary = "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+font-size-xxsmall = 10px
+font-size-xsmall = 12px
+font-size-small = 14px
+font-size-medium = 16px
+font-size-xmedium = 18px
+font-size-large = 20px
+font-size-xlarge = 24px
+font-size-xxlarge = 28px
+font-size-xxxlarge = 32px
+font-size-grande = 36px
+font-size-xgrande = 40px
+font-size-xxgrande = 46px
+font-size-xxxgrande = 52px
+font-size-poster = 72px
+font-size-billboard = 128px
+
+// MEDIA QUERIES AND BREAKPOINTS
+bp-mobile-min = 320px
+bp-mobile-max = 559px
+
+bp-tablet-min = 560px
+bp-tablet-max = 769px
+
+bp-desktop-md-min = 770px
+bp-desktop-md-max = 959px
+
+bp-desktop-min = 960px
+bp-desktop-max = 1300px
+
+// media query formatting strings... use with built-in s() function
+mq-query-minmax-fstr = "only screen and (min-width: %s) and (max-width: %s)"
+mq-query-min-fstr = "only screen and (min-width: %s)"
+
+// media query strings... use like @media mq-mobile
+mq-mobile = s(mq-query-minmax-fstr, 0px, bp-mobile-max)
+mq-tablet = s(mq-query-minmax-fstr, bp-tablet-min, bp-tablet-max)
+mq-desktop-md = s(mq-query-minmax-fstr, bp-desktop-md-min, bp-desktop-md-max)
+mq-desktop = s(mq-query-minmax-fstr, bp-desktop-min, bp-desktop-max)
+mq-max = s(mq-query-min-fstr, bp-desktop-max)
+
+body
+  text-align center
+  font-family font-family-primary
+  .font-primary 
+    font-family font-family-primary
+  .font-mont 
+    font-family Montserrat
+  a
+    color $fog
+    &:hover
+      color $canary
+      text-decoration none
+    &:visited      
+      text-decoration none !important
+      
+  div.slide 
+    padding-left 2%
+    padding-right 2%
+    
+  div.slide, h1
+    font-size 1em
+    @media mq-mobile
+      font-size 10vw
+    @media mq-tablet
+      font-size 10vw
+    @media mq-desktop-md
+      font-size 8vw
+    @media mq-desktop
+      font-size 8vw
+    @media mq-max
+      font-size 90px
+  
+  h2
+    @media mq-mobile
+      font-size 6vw
+    @media mq-tablet
+      font-size 6vw
+    @media mq-desktop-md
+      font-size 5vw
+    @media mq-desktop
+      font-size 5vw
+    @media mq-max
+      font-size 53px
+        
+  p
+    @media mq-mobile
+      font-size 4vw
+    @media mq-tablet
+      font-size 4vw
+    @media mq-desktop-md
+      font-size 4vw
+    @media mq-desktop
+      font-size 4vw
+    @media mq-max
+      font-size 43px
+
+  .title, .sub-title
+    font-family Montserrat
+    color $fog
+    font-size 2em    
+
+  .sub-title    
+    font-size 1.25em
+    margin-bottom 4%
+    padding-top 15vh
+
+  .upper
+    text-transform uppercase
+    
+  .img-icon
+    width 11vw
+    margin-top -1vw
+    
+    @media (min-width: bp-desktop-md-min)
+      width 9vw
+    @media mq-max 
+      width 8vw
+      margin-top 0px
+      max-width 117px
+
+  .main-title
+    font-size 23vw
+    padding-top 10vh
+    @media mq-desktop
+      padding-top 7vh
+    @media (min-width: bp-desktop-max)
+      padding-top 0px
+      font-size 300px
+    
+  .main-slide    
+    .name
+      font-size 7.5vw
+      padding-top 4vw
+      @media mq-desktop
+        padding-top 0px
+      @media (min-width: bp-desktop-max)
+        padding-top 0px
+        font-size 100px
+
+    .current-title, .current-city, .current-employer
+      font-size 7vw
+      padding-top 4vw
+      @media (min-width: bp-desktop-max)
+        padding-top 0px
+        font-size 90px
+    .current-title
+      font-family Montserrat
+      color $fog
+    .current-employer
+      
+      font-family Montserrat
+      font-size 5.5vw
+      @media (min-width: bp-desktop-max)
+        margin-top 10%
+        font-size 50px
+      a
+        font-family font-family-primary      
+
+  .current-stack
+    color $turtle
+    .box
+      text-align left   
+      height 34vh
+      max-height 450px
+
+      h2        
+        display inline
+        &::before
+          content "\00a0\00a0";
+          
+    .stack-row
+      margin-top 3vh
+
+  .interests
+    color $coal
+    a
+      font-family Montserrat
+    a:hover
+      color $metal
+    .int-col
+      .oss
+        font-family Montserrat
+        
+    .related-interests
+      text-align left
+    .not-interests
+      text-align right
+        
+    h2
+      margin-bottom 7%
+      @media (max-width: bp-tablet-max)
+        display inline
+        &::before
+          content "\00a0\00a0";
+          
+    .lacroix
+      @media mq-mobile
+        width 30vw
+      @media (min-width: bp-desktop-max)
+        max-width 116px
+        
+    .lacroix-pair
+      @media mq-mobile
+        font-size 25vw
+
+  .contact
+    color $canary
+    text-align center
+    a
+      font-family Montserrat
+      
+    .contact-row
+      height 18vh
+      margin-top 15vh
+        
+
+
+
+
+  .arrow-up
+  .arrow-down
+  .arrow-right
+  .arrow-left
+    width 0
+    height 1
+
+  .arrow-down
+  .arrow-up
+    border-left $arrowPx solid transparent
+    border-right $arrowPx solid transparent
+
+  .arrow-up-1
+    border-top $arrowPx solid $turtle
+  .arrow-up-2
+    border-top $arrowPx solid $coal
+  .arrow-up-3
+    border-top $arrowPx solid $canary
+  .arrow-down
+    border-bottom $arrowPx solid $canary
+
+  .arrow-left
+  .arrow-right
+    border-bottom $arrowPx solid transparent
+    border-top $arrowPx solid transparent
+
+  .arrow-left
+    border-right $arrowPx solid $canary
+  .arrow-right
+    border-left $arrowPx solid $canary
+
+  .abs-center
+  .abs-top
+  .abs-bottom
+    position absolute
+    margin-left auto
+    margin-right auto
+    left 0
+    right 0
+
+  .abs-top
+    top 0
+  .abs-bottom
+    bottom 0
+
+  .top-100
+    top 100%
+  .top-200
+    top 200%
+  .top-300
+    top 300%
+
+  .turtle
+    color $turtle
+  .turtle-b
+    background-color $turtle
+  .coal
+    color $coal
+  .coal-b
+    background-color $coal
+  .canary
+    color $canary
+  .canary-b
+    background-color $canary
+  .fog
+    color $fog
+  .fog-b
+    background-color $fog
+  .metal
+    color $metal
+  .metal-b
+    background-color $metal
+    
+//Nav
+.topNav
+  display block
+  @media mq-mobile
+    display none
+.sideNav
+  display block
+
+
+//hiders
+.md-hide
+  @media (min-width: bp-desktop-md-min)
+    display none
