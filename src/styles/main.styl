@@ -105,9 +105,9 @@ body
   
   h2
     @media mq-mobile
-      font-size 7vw
+      font-size 6vw
     @media mq-tablet
-      font-size 7vw
+      font-size 6vw
     @media mq-desktop-md
       font-size 5vw
     @media mq-desktop
@@ -117,9 +117,9 @@ body
         
   p
     @media mq-mobile
-      font-size 5vw
+      font-size 4vw
     @media mq-tablet
-      font-size 5vw
+      font-size 4vw
     @media mq-desktop-md
       font-size 4vw
     @media mq-desktop
@@ -130,8 +130,7 @@ body
   .title, .sub-title
     font-family Montserrat
     color $fog
-    font-size 2em
-    padding-top 10vh
+    font-size 2em    
 
   .sub-title    
     font-size 1.25em
@@ -153,30 +152,42 @@ body
       max-width 117px
 
   .main-title
-    @media mq-mobile
-      font-size 23vw
+    font-size 23vw
+    padding-top 10vh
+    @media mq-desktop
+      padding-top 7vh
+    @media (min-width: bp-desktop-max)
+      padding-top 0px
+      font-size 300px
     
   .main-slide    
     .name
-      font-size 5vw
-      @media mq-mobile
-       font-size 7.5vw
+      font-size 7.5vw
+      padding-top 4vw
+      @media mq-desktop
+        padding-top 0px
+      @media (min-width: bp-desktop-max)
+        padding-top 0px
+        font-size 100px
+
     .current-title, .current-city, .current-employer
-      font-size 3vw
-      @media mq-mobile
-        font-size 7vw
+      font-size 7vw
+      padding-top 4vw
+      @media (min-width: bp-desktop-max)
+        padding-top 0px
+        font-size 90px
     .current-title
       font-family Montserrat
       color $fog
     .current-employer
-      margin-top 10%
+      
       font-family Montserrat
-      font-size 2.5vw
+      font-size 5.5vw
+      @media (min-width: bp-desktop-max)
+        margin-top 10%
+        font-size 50px
       a
-        font-family font-family-primary
-        
-      @media mq-mobile
-        font-size 5.5vw
+        font-family font-family-primary      
 
   .current-stack
     color $turtle
@@ -189,6 +200,9 @@ body
         display inline
         &::before
           content "\00a0\00a0";
+          
+    .stack-row
+      margin-top 3vh
 
   .interests
     color $coal
@@ -228,8 +242,10 @@ body
     a
       font-family Montserrat
       
-    .col-xs-12
+    .contact-row
       height 18vh
+      margin-top 15vh
+        
 
 
 
@@ -314,7 +330,7 @@ body
     display none
 .sideNav
   display block
-    
+
 
 //hiders
 .md-hide

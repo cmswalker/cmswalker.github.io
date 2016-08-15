@@ -85,9 +85,9 @@ class FullpageReact extends React.Component {
           <div className="arrow-up arrow-up-1 abs-top top-100"></div>
           <div className="sub-title">Current Tools</div>
           <Grid className="current-stack">
-            <Row>
+            <Row className="stack-row">
               <Col className="box" xs={6}>
-                <img className="img-icon" src="./websiteImages/node-icon.png"></img>
+                <img className="img-icon" src="./assets/images/node-icon.png"></img>
                 <h2 className="upper">Dev</h2>
                 <p>Javascript, Node.js, NPM, Express, Angular, React, Electron, Babel, Mocha</p>
               </Col>
@@ -97,7 +97,7 @@ class FullpageReact extends React.Component {
                 <p>MySQL, MongoDB, Elasticsearch, Redis, Segment, Snowflake</p>
               </Col>
             </Row>
-            <Row>
+            <Row className="stack-row">
               <Col className="box" xs={6}>
                 <i className="fa fa-wrench" aria-hidden="true"></i>                
                 <h2 className="upper">Build</h2>
@@ -128,14 +128,15 @@ class FullpageReact extends React.Component {
                  Crons<br/>
                  Bots<br/>
                 </p>
-              </Col>              
+              </Col>
               <Col className="int-col not-interests" xs={12} md={6}>
-                <img className="img-icon lacroix" src="./websiteImages/laCroixIcon.png"></img>               
+                <img className="img-icon lacroix" src="./assets/images/laCroixIcon.png"></img>               
                 <h2 className="upper">Not</h2>
                 <p>
                  La Croix<br/>
                  Ugly Dogs<br/>
-                 <a target="_blank" href="https://www.instagram.com/p/BG2SVBHy5Gg/?taken-by=huskyjeans1738&hl=en">Proud Father</a>
+                 <a target="_blank" href="https://www.instagram.com/p/BG2SVBHy5Gg/?taken-by=huskyjeans1738&hl=en">Proud Father</a><br/>
+                 <a target="_blank" href="https://www.instagram.com/explore/tags/raidernation/">R4L</a>
                 </p>
               </Col>
             </Row>
@@ -145,18 +146,20 @@ class FullpageReact extends React.Component {
           <div className="arrow-up arrow-up-3 abs-top top-300"></div>
           <div className="sub-title">Contact</div>
           <Grid className="contact">
-            <Row>
-              <Col xs={12}>
-                <a href="mailto:c.michael.s.walker@gmail.com"><i className="fa fa-paper-plane"></i></a>
+            <Row className="contact-row">
+              <Col xs={6}>
+                <a target="_blank" href="mailto:c.michael.s.walker@gmail.com"><i className="fa fa-paper-plane"></i></a>
               </Col>
-              <Col xs={12}>
-                <a href="https://www.instagram.com/huskyjeans1738/"><i className="fa fa-instagram"></i></a>
+              <Col xs={6}>
+                <a target="_blank" href="https://www.instagram.com/huskyjeans1738/"><i className="fa fa-instagram"></i></a>
               </Col>
-              <Col xs={12}>
-                <a href="https://github.com/cmswalker"><i className="fa fa-github"></i></a>
+            </Row>
+            <Row className="contact-row">
+              <Col xs={6}>
+                <a target="_blank" href="https://github.com/cmswalker"><i className="fa fa-github"></i></a>
               </Col>
-              <Col xs={12}>
-                <a href="https://www.npmjs.com/~cmswalker">npm</a>
+              <Col xs={6}>
+                <a target="_blank" href="https://www.npmjs.com/~cmswalker">npm</a>
               </Col>
             </Row>
           </Grid>
