@@ -40714,6 +40714,8 @@
 	var scrollTo = __webpack_require__(441);
 	var events = __webpack_require__(438);
 	var renderUtils = __webpack_require__(439);
+	var BROWSER = renderUtils.browser();
+	var BODY = BROWSER === 'Firefox' ? document.documentElement : document.body;
 
 	var Fullpage = function (_React$Component) {
 	  _inherits(Fullpage, _React$Component);
@@ -40723,14 +40725,13 @@
 
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Fullpage).call(this, props));
 
-	    var slideChildren = _this.props.children.filter(function (c) {
-	      return c.type.name == 'Slide';
-	    });
+	    var slideChildren = getSlideCount(_this.props.children);
+
 	    _this.state = {
 	      name: 'Fullpage',
 	      defaultClass: 'Fullpage',
 	      slides: [],
-	      slidesCount: slideChildren.length,
+	      slidesCount: slideChildren,
 	      activeSlide: 0,
 	      lastActive: -1,
 	      downThreshold: -Math.abs(_this.props.threshold || 100),
@@ -40751,7 +40752,7 @@
 	      window.addEventListener('resize', this.onResize.bind(this));
 	      events.pub(this, this.scrollToSlide);
 
-	      //initialize slides
+	      //initialize slides    
 	      this.onResize();
 	      this.scrollToSlide(0);
 	    }
@@ -40781,6 +40782,8 @@
 	        slides.push(window.innerHeight * i);
 	      }
 
+	      // this.state.slides = slides;
+	      // this.state.height = window.innerHeight;
 	      this.setState({
 	        'slides': slides,
 	        'height': window.innerHeight
@@ -40803,7 +40806,7 @@
 	      });
 
 	      var self = this;
-	      scrollTo(document.body, self.state.slides[slide], 600, function () {
+	      scrollTo(BODY, self.state.slides[slide], 600, function () {
 	        self.setState({ 'activeSlide': slide });
 	        self.setState({ 'scrollPending': false });
 	      });
@@ -40851,7 +40854,7 @@
 	      }
 
 	      var scrollDown = (e.wheelDelta || -e.deltaY || e.detail) < this.state.downThreshold;
-	      var scrollUp = (e.wheelDelta || e.deltaY || e.detail) > this.state.upThreshold;
+	      var scrollUp = (e.wheelDelta || -e.deltaY || e.detail) > this.state.upThreshold;
 
 	      var activeSlide = this.state.activeSlide;
 
@@ -40876,7 +40879,7 @@
 	      this.setState({ 'scrollPending': true });
 
 	      var self = this;
-	      scrollTo(document.body, self.state.slides[activeSlide], 500, function () {
+	      scrollTo(BODY, self.state.slides[activeSlide], 500, function () {
 	        self.setState({ 'activeSlide': activeSlide });
 	        self.setState({ 'lastActive': scrollDown ? activeSlide-- : activeSlide++ });
 
@@ -40904,6 +40907,24 @@
 	Fullpage.propTypes = {
 	  children: React.PropTypes.node.isRequired
 	};
+
+	function getSlideCount(children) {
+	  return children.reduce(function (result, c) {
+	    if (Array.isArray(c)) {
+	      return getSlideCount(c);
+	    }
+
+	    if (!c.type) {
+	      return result;
+	    }
+
+	    if (c.type.name === 'Slide') {
+	      return result = result + 1;
+	    }
+
+	    return result;
+	  }, 0);
+	}
 
 	module.exports = Fullpage;
 
@@ -41611,13 +41632,39 @@
 /* 439 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 
 	function defaultClass() {
-	  return this.props.className || this.state.defaultClass;
+		return this.props.className || this.state.defaultClass;
 	}
 
+	function browser() {
+		// Return cached result if avalible, else get result then cache it.
+		if (browser.prototype._cachedResult) return browser.prototype._cachedResult;
+
+		// Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
+		var isOpera = !!window.opr && !!opr.addons || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+		// Firefox 1.0+
+		var isFirefox = typeof InstallTrigger !== 'undefined';
+
+		// At least Safari 3+: "[object HTMLElementConstructor]"
+		var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+
+		// Chrome 1+
+		var isChrome = !!window.chrome && !isOpera;
+
+		// At least IE6
+		var isIE = /*@cc_on!@*/false || !!document.documentMode;
+
+		// Edge 20+
+		var isEdge = !isIE && !!window.StyleMedia;
+
+		return browser.prototype._cachedResult = isOpera ? 'Opera' : isFirefox ? 'Firefox' : isSafari ? 'Safari' : isChrome ? 'Chrome' : isIE ? 'IE' : isEdge ? 'Edge' : "Other";
+	};
+
 	exports.defaultClass = defaultClass;
+	exports.browser = browser;
 
 /***/ },
 /* 440 */
