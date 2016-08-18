@@ -21487,9 +21487,8 @@
 
 
 	__webpack_require__(443);
-	__webpack_require__(444);
-	__webpack_require__(448);
-	__webpack_require__(450);
+	__webpack_require__(447);
+	__webpack_require__(449);
 
 	var fullPageOptions = {
 	  // for mouse/wheel events
@@ -41856,19 +41855,13 @@
 /* 443 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "/assets/fonts/MontSerrat.woff2";
-
-/***/ },
-/* 444 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(445);
+	var content = __webpack_require__(444);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(447)(content, {});
+	var update = __webpack_require__(446)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -41885,10 +41878,10 @@
 	}
 
 /***/ },
-/* 445 */
+/* 444 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(446)();
+	exports = module.exports = __webpack_require__(445)();
 	// imports
 
 
@@ -41899,7 +41892,7 @@
 
 
 /***/ },
-/* 446 */
+/* 445 */
 /***/ function(module, exports) {
 
 	/*
@@ -41955,7 +41948,7 @@
 
 
 /***/ },
-/* 447 */
+/* 446 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -42207,16 +42200,16 @@
 
 
 /***/ },
-/* 448 */
+/* 447 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(449);
+	var content = __webpack_require__(448);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(447)(content, {});
+	var update = __webpack_require__(446)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -42233,10 +42226,10 @@
 	}
 
 /***/ },
-/* 449 */
+/* 448 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(446)();
+	exports = module.exports = __webpack_require__(445)();
 	// imports
 
 
@@ -42247,16 +42240,16 @@
 
 
 /***/ },
-/* 450 */
+/* 449 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(451);
+	var content = __webpack_require__(450);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(447)(content, {});
+	var update = __webpack_require__(446)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -42273,15 +42266,15 @@
 	}
 
 /***/ },
-/* 451 */
+/* 450 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(446)();
+	exports = module.exports = __webpack_require__(445)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'Montserrat';\n  src: url(" + __webpack_require__(443) + ") format('woff2');\n  font-weight: normal;\n  font-style: normal;\n}\n/* FONT PATH\n * -------------------------- */\n@font-face {\n  font-family: 'FontAwesome';\n  src: url(\"//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.eot\");\n  src: url(\"//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.eot?#iefix\") format('embedded-opentype'), url(\"//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.woff2\") format('woff2'), url(\"//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.woff\") format('woff'), url(\"//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.ttf\") format('truetype'), url(\"//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.svg#fontawesomeregular\") format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\nbody {\n  text-align: center;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\nbody .font-primary {\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\nbody .font-mont {\n  font-family: Montserrat;\n}\nbody a {\n  color: #e1efe6;\n}\nbody a:hover {\n  color: #efcb68;\n  text-decoration: none;\n}\nbody a:visited {\n  text-decoration: none !important;\n}\nbody div.slide {\n  padding-left: 2%;\n  padding-right: 2%;\n}\nbody div.slide,\nbody h1 {\n  font-size: 1em;\n}\n@media only screen and (min-width: 0px) and (max-width: 559px) {\n  body div.slide,\n  body h1 {\n    font-size: 10vw;\n  }\n}\n@media only screen and (min-width: 560px) and (max-width: 769px) {\n  body div.slide,\n  body h1 {\n    font-size: 10vw;\n  }\n}\n@media only screen and (min-width: 770px) and (max-width: 959px) {\n  body div.slide,\n  body h1 {\n    font-size: 8vw;\n  }\n}\n@media only screen and (min-width: 960px) and (max-width: 1300px) {\n  body div.slide,\n  body h1 {\n    font-size: 7vw;\n  }\n}\n@media only screen and (min-width: 1300px) {\n  body div.slide,\n  body h1 {\n    font-size: 85px;\n  }\n}\n@media only screen and (min-width: 0px) and (max-width: 559px) {\n  body h2 {\n    font-size: 6vw;\n  }\n}\n@media only screen and (min-width: 560px) and (max-width: 769px) {\n  body h2 {\n    font-size: 5vw;\n  }\n}\n@media only screen and (min-width: 770px) and (max-width: 959px) {\n  body h2 {\n    font-size: 3vw;\n  }\n}\n@media only screen and (min-width: 960px) and (max-width: 1300px) {\n  body h2 {\n    font-size: 3vw;\n  }\n}\n@media only screen and (min-width: 1300px) {\n  body h2 {\n    font-size: 35px;\n  }\n}\n@media only screen and (min-width: 0px) and (max-width: 559px) {\n  body p {\n    font-size: 4vw;\n  }\n}\n@media only screen and (min-width: 560px) and (max-width: 769px) {\n  body p {\n    font-size: 3vw;\n  }\n}\n@media only screen and (min-width: 770px) and (max-width: 959px) {\n  body p {\n    font-size: 2vw;\n  }\n}\n@media only screen and (min-width: 960px) and (max-width: 1300px) {\n  body p {\n    font-size: 2vw;\n  }\n}\n@media only screen and (min-width: 1300px) {\n  body p {\n    font-size: 25px;\n  }\n}\nbody .fa {\n  font-size: 1em;\n}\nbody .title,\nbody .sub-title {\n  font-family: Montserrat;\n  color: #e1efe6;\n  font-size: 2em;\n}\nbody .sub-title {\n  font-size: 1em;\n  margin-bottom: 4%;\n  padding-top: 15vh;\n}\n@media (min-width: 770px) {\n  body .sub-title {\n    margin-bottom: 0px;\n  }\n}\nbody .upper {\n  text-transform: uppercase;\n}\nbody .img-icon {\n  width: 11vw;\n  margin-top: -1vw;\n}\n@media (min-width: 770px) {\n  body .img-icon {\n    width: 9vw;\n  }\n}\n@media only screen and (min-width: 1300px) {\n  body .img-icon {\n    width: 8vw;\n    margin-top: 0px;\n    max-width: 117px;\n  }\n}\nbody .main-title {\n  font-size: 20vw;\n  padding-top: 10vh;\n}\n@media only screen and (min-width: 960px) and (max-width: 1300px) {\n  body .main-title {\n    padding-top: 7vh;\n  }\n}\n@media (min-width: 1300px) {\n  body .main-title {\n    padding-top: 0px;\n    font-size: 250px;\n  }\n}\nbody .main-slide .name {\n  font-size: 7.5vw;\n  padding-top: 4vw;\n}\n@media (min-width: 770px) {\n  body .main-slide .name {\n    padding-top: 0px;\n    font-size: 4.5vw;\n  }\n}\n@media only screen and (min-width: 560px) and (max-width: 769px) {\n  body .main-slide .name {\n    padding-top: 0px;\n  }\n}\n@media (min-width: 1300px) {\n  body .main-slide .name {\n    padding-top: 0px;\n    font-size: 70px;\n  }\n}\nbody .main-slide .current-title,\nbody .main-slide .current-city,\nbody .main-slide .current-employer {\n  font-size: 7vw;\n  padding-top: 4vw;\n}\n@media (min-width: 770px) {\n  body .main-slide .current-title,\n  body .main-slide .current-city,\n  body .main-slide .current-employer {\n    font-size: 3.5vw;\n    padding-top: 1vw;\n  }\n}\n@media (min-width: 1300px) {\n  body .main-slide .current-title,\n  body .main-slide .current-city,\n  body .main-slide .current-employer {\n    padding-top: 0px;\n    font-size: 50px;\n  }\n}\nbody .main-slide .current-title {\n  font-family: Montserrat;\n  color: #e1efe6;\n}\nbody .main-slide .current-employer {\n  font-family: Montserrat;\n  font-size: 5.5vw;\n}\n@media (min-width: 770px) {\n  body .main-slide .current-employer {\n    font-size: 3vw;\n  }\n}\n@media (min-width: 1300px) {\n  body .main-slide .current-employer {\n    margin-top: 10%;\n    font-size: 50px;\n  }\n}\nbody .main-slide .current-employer a {\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n@media (min-width: 770px) {\n  body .main-slide h1,\n  body .main-slide .current-title,\n  body .main-slide .current-city,\n  body .main-slide .current-employer {\n    margin-top: 0px !important;\n  }\n}\nbody .current-stack {\n  color: #19d2ae;\n}\nbody .current-stack .box {\n  text-align: left;\n  height: 34vh;\n  max-height: 450px;\n}\nbody .current-stack .box h2 {\n  display: inline;\n}\nbody .current-stack .box h2::before {\n  content: \"\\A0\\A0\";\n}\nbody .interests {\n  color: #16302b;\n}\nbody .interests a {\n  font-family: Montserrat;\n}\nbody .interests a:hover {\n  color: #aeb7b3;\n}\nbody .interests .int-col .oss {\n  font-family: Montserrat;\n}\nbody .interests .related-interests {\n  text-align: left;\n}\nbody .interests .not-interests {\n  text-align: right;\n}\nbody .interests h2 {\n  margin-bottom: 7%;\n}\n@media (max-width: 769px) {\n  body .interests h2 {\n    display: inline;\n  }\n  body .interests h2::before {\n    content: \"\\A0\\A0\";\n  }\n}\n@media only screen and (min-width: 0px) and (max-width: 559px) {\n  body .interests .lacroix {\n    width: 20vw;\n  }\n}\n@media (min-width: 1300px) {\n  body .interests .lacroix {\n    max-width: 116px;\n  }\n}\n@media only screen and (min-width: 0px) and (max-width: 559px) {\n  body .interests .lacroix-pair {\n    font-size: 15vw;\n  }\n}\nbody .contact {\n  color: #efcb68;\n  text-align: center;\n}\nbody .contact a {\n  font-family: Montserrat;\n}\nbody .contact .contact-row {\n  height: 18vh;\n  margin-top: 15vh;\n}\nbody .arrow-up,\nbody .arrow-down,\nbody .arrow-right,\nbody .arrow-left {\n  width: 0;\n  height: 1;\n}\nbody .arrow-down,\nbody .arrow-up {\n  border-left: 10vh solid transparent;\n  border-right: 10vh solid transparent;\n}\nbody .arrow-up-1 {\n  border-top: 10vh solid #19d2ae;\n}\nbody .arrow-up-2 {\n  border-top: 10vh solid #16302b;\n}\nbody .arrow-up-3 {\n  border-top: 10vh solid #efcb68;\n}\nbody .arrow-down {\n  border-bottom: 10vh solid #efcb68;\n}\nbody .arrow-left,\nbody .arrow-right {\n  border-bottom: 10vh solid transparent;\n  border-top: 10vh solid transparent;\n}\nbody .arrow-left {\n  border-right: 10vh solid #efcb68;\n}\nbody .arrow-right {\n  border-left: 10vh solid #efcb68;\n}\nbody .abs-center,\nbody .abs-top,\nbody .abs-bottom {\n  position: absolute;\n  margin-left: auto;\n  margin-right: auto;\n  left: 0;\n  right: 0;\n}\nbody .abs-top {\n  top: 0;\n}\nbody .abs-bottom {\n  bottom: 0;\n}\nbody .top-100 {\n  top: 100%;\n}\nbody .top-200 {\n  top: 200%;\n}\nbody .top-300 {\n  top: 300%;\n}\nbody .turtle {\n  color: #19d2ae;\n}\nbody .turtle-b {\n  background-color: #19d2ae;\n}\nbody .coal {\n  color: #16302b;\n}\nbody .coal-b {\n  background-color: #16302b;\n}\nbody .canary {\n  color: #efcb68;\n}\nbody .canary-b {\n  background-color: #efcb68;\n}\nbody .fog {\n  color: #e1efe6;\n}\nbody .fog-b {\n  background-color: #e1efe6;\n}\nbody .metal {\n  color: #aeb7b3;\n}\nbody .metal-b {\n  background-color: #aeb7b3;\n}\n.topNav {\n  display: block;\n}\n@media only screen and (min-width: 0px) and (max-width: 559px) {\n  .topNav {\n    display: none;\n  }\n}\n.sideNav {\n  display: block;\n}\n@media (min-width: 770px) {\n  .md-hide {\n    display: none;\n  }\n}\n", ""]);
+	exports.push([module.id, "/* FONT PATH\n * -------------------------- */\n@font-face {\n  font-family: 'FontAwesome';\n  src: url(\"//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.eot\");\n  src: url(\"//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.eot?#iefix\") format('embedded-opentype'), url(\"//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.woff2\") format('woff2'), url(\"//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.woff\") format('woff'), url(\"//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.ttf\") format('truetype'), url(\"//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.svg#fontawesomeregular\") format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\nbody {\n  text-align: center;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\nbody .font-primary {\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\nbody .font-mont {\n  font-family: Montserrat;\n}\nbody a {\n  color: #e1efe6;\n}\nbody a:hover {\n  color: #efcb68;\n  text-decoration: none;\n}\nbody a:visited {\n  text-decoration: none !important;\n}\nbody div.slide {\n  padding-left: 2%;\n  padding-right: 2%;\n}\nbody div.slide,\nbody h1 {\n  font-size: 1em;\n}\n@media only screen and (min-width: 0px) and (max-width: 559px) {\n  body div.slide,\n  body h1 {\n    font-size: 10vw;\n  }\n}\n@media only screen and (min-width: 560px) and (max-width: 769px) {\n  body div.slide,\n  body h1 {\n    font-size: 10vw;\n  }\n}\n@media only screen and (min-width: 770px) and (max-width: 959px) {\n  body div.slide,\n  body h1 {\n    font-size: 8vw;\n  }\n}\n@media only screen and (min-width: 960px) and (max-width: 1300px) {\n  body div.slide,\n  body h1 {\n    font-size: 7vw;\n  }\n}\n@media only screen and (min-width: 1300px) {\n  body div.slide,\n  body h1 {\n    font-size: 85px;\n  }\n}\n@media only screen and (min-width: 0px) and (max-width: 559px) {\n  body h2 {\n    font-size: 6vw;\n  }\n}\n@media only screen and (min-width: 560px) and (max-width: 769px) {\n  body h2 {\n    font-size: 5vw;\n  }\n}\n@media only screen and (min-width: 770px) and (max-width: 959px) {\n  body h2 {\n    font-size: 3vw;\n  }\n}\n@media only screen and (min-width: 960px) and (max-width: 1300px) {\n  body h2 {\n    font-size: 3vw;\n  }\n}\n@media only screen and (min-width: 1300px) {\n  body h2 {\n    font-size: 35px;\n  }\n}\n@media only screen and (min-width: 0px) and (max-width: 559px) {\n  body p {\n    font-size: 4vw;\n  }\n}\n@media only screen and (min-width: 560px) and (max-width: 769px) {\n  body p {\n    font-size: 3vw;\n  }\n}\n@media only screen and (min-width: 770px) and (max-width: 959px) {\n  body p {\n    font-size: 2vw;\n  }\n}\n@media only screen and (min-width: 960px) and (max-width: 1300px) {\n  body p {\n    font-size: 2vw;\n  }\n}\n@media only screen and (min-width: 1300px) {\n  body p {\n    font-size: 25px;\n  }\n}\nbody .fa {\n  font-size: 1em;\n}\nbody .title,\nbody .sub-title {\n  font-family: Montserrat;\n  color: #e1efe6;\n  font-size: 2em;\n}\nbody .sub-title {\n  font-size: 1em;\n  margin-bottom: 4%;\n  padding-top: 15vh;\n}\n@media (min-width: 770px) {\n  body .sub-title {\n    margin-bottom: 0px;\n  }\n}\nbody .upper {\n  text-transform: uppercase;\n}\nbody .img-icon {\n  width: 11vw;\n  margin-top: -1vw;\n}\n@media (min-width: 770px) {\n  body .img-icon {\n    width: 9vw;\n  }\n}\n@media only screen and (min-width: 1300px) {\n  body .img-icon {\n    width: 8vw;\n    margin-top: 0px;\n    max-width: 117px;\n  }\n}\nbody .main-title {\n  font-size: 20vw;\n  padding-top: 10vh;\n}\n@media only screen and (min-width: 960px) and (max-width: 1300px) {\n  body .main-title {\n    padding-top: 7vh;\n  }\n}\n@media (min-width: 1300px) {\n  body .main-title {\n    padding-top: 0px;\n    font-size: 250px;\n  }\n}\nbody .main-slide .name {\n  font-size: 7.5vw;\n  padding-top: 4vw;\n}\n@media (min-width: 770px) {\n  body .main-slide .name {\n    padding-top: 0px;\n    font-size: 4.5vw;\n  }\n}\n@media only screen and (min-width: 560px) and (max-width: 769px) {\n  body .main-slide .name {\n    padding-top: 0px;\n  }\n}\n@media (min-width: 1300px) {\n  body .main-slide .name {\n    padding-top: 0px;\n    font-size: 70px;\n  }\n}\nbody .main-slide .current-title,\nbody .main-slide .current-city,\nbody .main-slide .current-employer {\n  font-size: 7vw;\n  padding-top: 4vw;\n}\n@media (min-width: 770px) {\n  body .main-slide .current-title,\n  body .main-slide .current-city,\n  body .main-slide .current-employer {\n    font-size: 3.5vw;\n    padding-top: 1vw;\n  }\n}\n@media (min-width: 1300px) {\n  body .main-slide .current-title,\n  body .main-slide .current-city,\n  body .main-slide .current-employer {\n    padding-top: 0px;\n    font-size: 50px;\n  }\n}\nbody .main-slide .current-title {\n  font-family: Montserrat;\n  color: #e1efe6;\n}\nbody .main-slide .current-employer {\n  font-family: Montserrat;\n  font-size: 5.5vw;\n}\n@media (min-width: 770px) {\n  body .main-slide .current-employer {\n    font-size: 3vw;\n  }\n}\n@media (min-width: 1300px) {\n  body .main-slide .current-employer {\n    margin-top: 10%;\n    font-size: 50px;\n  }\n}\nbody .main-slide .current-employer a {\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n@media (min-width: 770px) {\n  body .main-slide h1,\n  body .main-slide .current-title,\n  body .main-slide .current-city,\n  body .main-slide .current-employer {\n    margin-top: 0px !important;\n  }\n}\nbody .current-stack {\n  color: #19d2ae;\n}\nbody .current-stack .box {\n  text-align: left;\n  height: 34vh;\n  max-height: 450px;\n}\nbody .current-stack .box h2 {\n  display: inline;\n}\nbody .current-stack .box h2::before {\n  content: \"\\A0\\A0\";\n}\nbody .interests {\n  color: #16302b;\n}\nbody .interests a {\n  font-family: Montserrat;\n}\nbody .interests a:hover {\n  color: #aeb7b3;\n}\nbody .interests .int-col .oss {\n  font-family: Montserrat;\n}\nbody .interests .related-interests {\n  text-align: left;\n}\nbody .interests .not-interests {\n  text-align: right;\n}\nbody .interests h2 {\n  margin-bottom: 7%;\n}\n@media (max-width: 769px) {\n  body .interests h2 {\n    display: inline;\n  }\n  body .interests h2::before {\n    content: \"\\A0\\A0\";\n  }\n}\n@media only screen and (min-width: 0px) and (max-width: 559px) {\n  body .interests .lacroix {\n    width: 20vw;\n  }\n}\n@media (min-width: 1300px) {\n  body .interests .lacroix {\n    max-width: 116px;\n  }\n}\n@media only screen and (min-width: 0px) and (max-width: 559px) {\n  body .interests .lacroix-pair {\n    font-size: 15vw;\n  }\n}\nbody .contact {\n  color: #efcb68;\n  text-align: center;\n}\nbody .contact a {\n  font-family: Montserrat;\n}\nbody .contact .contact-row {\n  height: 18vh;\n  margin-top: 15vh;\n}\nbody .arrow-up,\nbody .arrow-down,\nbody .arrow-right,\nbody .arrow-left {\n  width: 0;\n  height: 1;\n}\nbody .arrow-down,\nbody .arrow-up {\n  border-left: 10vh solid transparent;\n  border-right: 10vh solid transparent;\n}\nbody .arrow-up-1 {\n  border-top: 10vh solid #19d2ae;\n}\nbody .arrow-up-2 {\n  border-top: 10vh solid #16302b;\n}\nbody .arrow-up-3 {\n  border-top: 10vh solid #efcb68;\n}\nbody .arrow-down {\n  border-bottom: 10vh solid #efcb68;\n}\nbody .arrow-left,\nbody .arrow-right {\n  border-bottom: 10vh solid transparent;\n  border-top: 10vh solid transparent;\n}\nbody .arrow-left {\n  border-right: 10vh solid #efcb68;\n}\nbody .arrow-right {\n  border-left: 10vh solid #efcb68;\n}\nbody .abs-center,\nbody .abs-top,\nbody .abs-bottom {\n  position: absolute;\n  margin-left: auto;\n  margin-right: auto;\n  left: 0;\n  right: 0;\n}\nbody .abs-top {\n  top: 0;\n}\nbody .abs-bottom {\n  bottom: 0;\n}\nbody .top-100 {\n  top: 100%;\n}\nbody .top-200 {\n  top: 200%;\n}\nbody .top-300 {\n  top: 300%;\n}\nbody .turtle {\n  color: #19d2ae;\n}\nbody .turtle-b {\n  background-color: #19d2ae;\n}\nbody .coal {\n  color: #16302b;\n}\nbody .coal-b {\n  background-color: #16302b;\n}\nbody .canary {\n  color: #efcb68;\n}\nbody .canary-b {\n  background-color: #efcb68;\n}\nbody .fog {\n  color: #e1efe6;\n}\nbody .fog-b {\n  background-color: #e1efe6;\n}\nbody .metal {\n  color: #aeb7b3;\n}\nbody .metal-b {\n  background-color: #aeb7b3;\n}\n.topNav {\n  display: block;\n}\n@media only screen and (min-width: 0px) and (max-width: 559px) {\n  .topNav {\n    display: none;\n  }\n}\n.sideNav {\n  display: block;\n}\n@media (min-width: 770px) {\n  .md-hide {\n    display: none;\n  }\n}\n", ""]);
 
 	// exports
 

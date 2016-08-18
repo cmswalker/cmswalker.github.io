@@ -3,7 +3,6 @@ const React = require('react');
 const {Fullpage, Slide, SideNav} = require('fullpage-react');
 import { Grid, Row, Col, Button } from 'react-bootstrap';
 
-require('../assets/fonts/MontSerrat.woff2');
 require('./styles/font-awesome.min.css');
 require('normalize.css');
 require('./styles/main.styl');
