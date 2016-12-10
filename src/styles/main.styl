@@ -67,22 +67,22 @@ mq-max = s(mq-query-min-fstr, bp-desktop-max)
 body
   text-align center
   font-family font-family-primary
-  .font-primary 
+  .font-primary
     font-family font-family-primary
-  .font-mont 
+  .font-mont
     font-family Montserrat
   a
     color $fog
     &:hover
       color $canary
       text-decoration none
-    &:visited      
+    &:visited
       text-decoration none !important
-      
-  div.slide 
+
+  div.slide
     padding-left 2%
     padding-right 2%
-    
+
   div.slide, h1
     font-size 1em
     @media mq-mobile
@@ -95,7 +95,7 @@ body
       font-size 7vw
     @media mq-max
       font-size 85px
-  
+
   h2
     @media mq-mobile
       font-size 6vw
@@ -107,7 +107,7 @@ body
       font-size 3vw
     @media mq-max
       font-size 35px
-        
+
   p
     @media mq-mobile
       font-size 4vw
@@ -119,8 +119,8 @@ body
       font-size 2vw
     @media mq-max
       font-size 25px
-      
-  .fa 
+
+  .fa
     font-size 1em
 
   .title, .sub-title
@@ -130,35 +130,44 @@ body
 
   .sub-title
     font-size 1em
-    margin-bottom 4%
-    @media (min-width: bp-desktop-md-min)
-      margin-bottom 0px
-    padding-top 15vh
+    padding-top 8vw
+
+    @media (max-width: bp-tablet-max)
+      padding-top 15vw
+
+    @media mq-tablet
+      padding-top 15vw
+      margin-bottom 15vw
+
+    @media mq-mobile
+      padding-top 25vw
+      margin-bottom 15vw
+
 
   .upper
     text-transform uppercase
-    
+
   .img-icon
     width 11vw
     margin-top -1vw
-    
+
     @media (min-width: bp-desktop-md-min)
       width 9vw
-    @media mq-max 
+    @media mq-max
       width 8vw
       margin-top 0px
       max-width 117px
 
   .main-title
-    font-size 20vw
-    padding-top 10vh
+    font-size 16vw
+    padding-top 5vw
     @media mq-desktop
       padding-top 7vh
     @media (min-width: bp-desktop-max)
       padding-top 0px
       font-size 250px
-    
-  .main-slide    
+
+  .main-slide
     .name
       font-size 7.5vw
       padding-top 4vw
@@ -183,7 +192,7 @@ body
     .current-title
       font-family Montserrat
       color $fog
-    .current-employer      
+    .current-employer
       font-family Montserrat
       font-size 5.5vw
       @media (min-width: bp-desktop-md-min)
@@ -192,8 +201,8 @@ body
         margin-top 10%
         font-size 50px
       a
-        font-family font-family-primary      
-        
+        font-family font-family-primary
+
     h1, .current-title, .current-city, .current-employer
       @media (min-width: bp-desktop-md-min)
         margin-top 0px !important
@@ -201,16 +210,23 @@ body
   .current-stack
     color $turtle
     .box
-      text-align left   
+      text-align left
       height 34vh
       max-height 450px
 
-      h2        
+      h2
         display inline
         &::before
           content "\00a0\00a0";
 
   .interests
+    padding-left 7%
+    padding-right 7%
+
+    @media (min-width: bp-desktop-md-min)
+      padding-left 2%
+      padding-right 2%
+
     color $coal
     a
       font-family Montserrat
@@ -219,25 +235,25 @@ body
     .int-col
       .oss
         font-family Montserrat
-        
+
     .related-interests
       text-align left
     .not-interests
       text-align right
-        
+
     h2
       margin-bottom 7%
       @media (max-width: bp-tablet-max)
         display inline
         &::before
           content "\00a0\00a0";
-          
+
     .lacroix
       @media mq-mobile
         width 20vw
       @media (min-width: bp-desktop-max)
         max-width 116px
-        
+
     .lacroix-pair
       @media mq-mobile
         font-size 15vw
@@ -247,14 +263,10 @@ body
     text-align center
     a
       font-family Montserrat
-      
+
     .contact-row
       height 18vh
       margin-top 15vh
-        
-
-
-
 
   .arrow-up
   .arrow-down
@@ -328,7 +340,7 @@ body
     color $metal
   .metal-b
     background-color $metal
-    
+
 //Nav
 .topNav
   display block
@@ -342,3 +354,11 @@ body
 .md-hide
   @media (min-width: bp-desktop-md-min)
     display none
+
+// .square
+//
+// .diamond
+//
+// .triangle
+//
+// .circle
