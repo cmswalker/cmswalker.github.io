@@ -76,7 +76,7 @@ class FullpageReact extends React.Component {
           <Grid className="main-slide">
             <h1 className="name upper">Michael Walker</h1>
             <h2 className="current-title">Full Stack Dev</h2>
-            <h2 className="current-city upper">Oakland <i className="fa fa-shopping-cart" aria-hidden="true"></i></h2>
+            <h2 className="current-city upper">Oakland</h2>
             <h2 className="current-employer">Currently @ <a target="_blank" href="https://www.madison-reed.com">Madison Reed</a></h2>
           </Grid>
         </Slide>

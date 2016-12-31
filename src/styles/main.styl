@@ -61,7 +61,7 @@ mq-query-min-fstr = "only screen and (min-width: %s)"
 mq-mobile = s(mq-query-minmax-fstr, 0px, bp-mobile-max)
 mq-tablet = s(mq-query-minmax-fstr, bp-tablet-min, bp-tablet-max)
 mq-desktop-md = s(mq-query-minmax-fstr, bp-desktop-md-min, bp-desktop-md-max)
-mq-desktop = s(mq-query-minmax-fstr, bp-desktop-min, bp-desktop-max)
+mq-desktop = s(mq-query-min-fstr, bp-desktop-min)
 mq-max = s(mq-query-min-fstr, bp-desktop-max)
 
 body
@@ -130,19 +130,15 @@ body
 
   .sub-title
     font-size 1em
-    padding-top 8vw
-
-    @media (max-width: bp-tablet-max)
-      padding-top 15vw
+    padding-top 7%    
 
     @media mq-tablet
-      padding-top 15vw
-      margin-bottom 15vw
+      padding-top 15%
+      margin-bottom 10%
 
     @media mq-mobile
-      padding-top 25vw
-      margin-bottom 15vw
-
+      padding-top 25%
+      margin-bottom 15%
 
   .upper
     text-transform uppercase
@@ -162,7 +158,7 @@ body
     font-size 16vw
     padding-top 5vw
     @media mq-desktop
-      padding-top 7vh
+      padding-top 1vw
     @media (min-width: bp-desktop-max)
       padding-top 0px
       font-size 250px
@@ -267,8 +263,9 @@ body
       font-family Montserrat
 
     .contact-row
-      height 18vh
-      margin-top 15vh
+      margin-top 15%
+      @media mq-desktop
+        margin-top 7%
 
   .arrow-up
   .arrow-down
