@@ -1,363 +1,228 @@
-/* FONT PATH
- * -------------------------- */
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.eot');
-  src: url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-       url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.woff2') format('woff2'),
-       url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.woff') format('woff'),
-       url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.ttf') format('truetype'),
-       url('//use.fontawesome.com/releases/v4.6.3/fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+$teal = #18d2ba;
+$grey = #ebf2fa;
+$white = #fff;
+$navy = #575E7D;
+$mid-grey = #EAF2FB;
+$real-blue = #408DF4;
 
-$arrowPx = 10vh
+$huge-font = 4.25rem;
+$big-font = 2.25rem;
+$medium-font = 1.5rem;
 
-$metal = #AEB7B3
-$canary = #EFCB68
-$fog = #E1EFE6
-$coal = #16302B
-$turtle = #19D2AE
+$ten = 10px;
+$twenty-five = 25px;
 
-// Typography
-// -------------------------
-font-family-primary = "Helvetica Neue", Helvetica, Arial, sans-serif;
+$mobile = 768px;
+$crutch = 767px;
 
-font-size-xxsmall = 10px
-font-size-xsmall = 12px
-font-size-small = 14px
-font-size-medium = 16px
-font-size-xmedium = 18px
-font-size-large = 20px
-font-size-xlarge = 24px
-font-size-xxlarge = 28px
-font-size-xxxlarge = 32px
-font-size-grande = 36px
-font-size-xgrande = 40px
-font-size-xxgrande = 46px
-font-size-xxxgrande = 52px
-font-size-poster = 72px
-font-size-billboard = 128px
+.color-teal
+  color $teal
 
-// MEDIA QUERIES AND BREAKPOINTS
-bp-mobile-min = 320px
-bp-mobile-max = 559px
+.color-white
+  color $white
 
-bp-tablet-min = 560px
-bp-tablet-max = 769px
+.big-font
+  font-size $big-font
 
-bp-desktop-md-min = 770px
-bp-desktop-md-max = 959px
+  @media (max-width: $crutch)
+    font-size $medium-font
 
-bp-desktop-min = 960px
-bp-desktop-max = 1300px
+.align-right
+  text-align right
 
-// media query formatting strings... use with built-in s() function
-mq-query-minmax-fstr = "only screen and (min-width: %s) and (max-width: %s)"
-mq-query-min-fstr = "only screen and (min-width: %s)"
-
-// media query strings... use like @media mq-mobile
-mq-mobile = s(mq-query-minmax-fstr, 0px, bp-mobile-max)
-mq-tablet = s(mq-query-minmax-fstr, bp-tablet-min, bp-tablet-max)
-mq-desktop-md = s(mq-query-minmax-fstr, bp-desktop-md-min, bp-desktop-md-max)
-mq-desktop = s(mq-query-min-fstr, bp-desktop-min)
-mq-max = s(mq-query-min-fstr, bp-desktop-max)
+.bold
+  font-weight bold
 
 body
-  text-align center
-  font-family font-family-primary
-  .font-primary
-    font-family font-family-primary
-  .font-mont
-    font-family Montserrat
+  padding-top 0px
+  padding 0 10%
+
   a
-    color $fog
+    color $navy;
+    text-decoration: none;
+    padding: 2px 3px;
+    transition: all .2s ease-in-out;
+    -webkit-box-shadow: inset 0 -3px 0 $real-blue
+    box-shadow: inset 0 -3px 0 $real-blue
+
     &:hover
-      color $canary
-      text-decoration none
-    &:visited
-      text-decoration none !important
+      box-shadow: inset 0 -33px 0 0 $real-blue
+      color: $white !important
 
-  div.slide
-    padding-left 2%
-    padding-right 2%
+  // Overrides
+  span
+    i.em
+      display inline-block
 
-  div.slide, h1
-    font-size 1em
-    @media mq-mobile
-      font-size 10vw
-    @media mq-tablet
-      font-size 10vw
-    @media mq-desktop-md
-      font-size 8vw
-    @media mq-desktop
-      font-size 7vw
-    @media mq-max
-      font-size 85px
+    &::after
+      content " ";
 
-  h2
-    @media mq-mobile
-      font-size 6vw
-    @media mq-tablet
-      font-size 5vw
-    @media mq-desktop-md
-      font-size 3vw
-    @media mq-desktop
-      font-size 3vw
-    @media mq-max
-      font-size 35px
+  .siimple-tag, .siimple-tip
+    border-radius 0px
 
-  p
-    @media mq-mobile
-      font-size 4vw
-    @media mq-tablet
-      font-size 3vw
-    @media mq-desktop-md
-      font-size 2vw
-    @media mq-desktop
-      font-size 2vw
-    @media mq-max
-      font-size 25px
+  .siimple-tip
+    line-height 2rem
+    padding-top $twenty-five
+    padding-bottom $twenty-five
 
-  .fa
-    font-size 1em
+  header
+    height 100vh
 
-  .title, .sub-title
-    font-family Montserrat
-    color $fog
-    font-size 2em
+    #header-title
+      margin-top 10%
+      font-size $huge-font
 
-  .sub-title
-    font-size 1em
-    padding-top 7%    
+      span
+        &::after
+          content "";
 
-    @media mq-tablet
-      padding-top 15%
-      margin-bottom 10%
+    .siimple-tag
+      font-size $big-font
+      line-height inherit
 
-    @media mq-mobile
-      padding-top 25%
-      margin-bottom 15%
+      @media (max-width: $crutch)
+        font-size $medium-font
 
-  .upper
-    text-transform uppercase
+  section
+    margin-bottom 10%
+    padding-left 5%
+    padding-right 1.2%
 
-  .img-icon
-    width 11vw
-    margin-top -1vw
+    .siimple-tip
+      box-shadow 10px 10px
 
-    @media (min-width: bp-desktop-md-min)
-      width 9vw
-    @media mq-max
-      width 8vw
-      margin-top 0px
-      max-width 117px
+  .content
+    width 80%
+    margin 0 auto
+    max-width 750px
 
-  .main-title
-    font-size 16vw
-    padding-top 5vw
-    @media mq-desktop
-      padding-top 1vw
-    @media (min-width: bp-desktop-max)
-      padding-top 0px
-      font-size 250px
+  // Font
+  .small-font
+    font-size 1rem
 
-  .main-slide
-    .name
-      font-size 7.5vw
-      padding-top 4vw
-      @media (min-width: bp-desktop-md-min)
-        padding-top 0px
-        font-size 4.5vw
-      @media mq-tablet
-        padding-top 0px
-      @media (min-width: bp-desktop-max)
-        padding-top 0px
-        font-size 70px
+  .medium-font
+    font-size 1.25rem
 
-    .current-title, .current-city, .current-employer
-      font-size 7vw
-      padding-top 4vw
-      @media (min-width: bp-desktop-md-min)
-        font-size 3.5vw
-        padding-top 1vw
-      @media (min-width: bp-desktop-max)
-        padding-top 0px
-        font-size 50px
-    .current-title
-      font-family Montserrat
-      color $fog
-    .current-employer
-      font-family Montserrat
-      font-size 5.5vw
-      @media (min-width: bp-desktop-md-min)
-        font-size 3vw
-      @media (min-width: bp-desktop-max)
-        margin-top 10%
-        font-size 50px
-      a
-        font-family font-family-primary
+  // Spacing
+  .siimple-blockquote
+      div
+        margin-bottom .5rem
 
-    h1, .current-title, .current-city, .current-employer
-      @media (min-width: bp-desktop-md-min)
-        margin-top 0px !important
+  .section-title
+      display flex
 
-  .current-stack
-    color $turtle
-    .box
-      text-align left
-      height 34vh
-      max-height 450px
+      .siimple-tag
+        padding 0px 10px
 
-      h2
-        display inline
-        &::before
-          content "\00a0\00a0";
+        @media (max-width: $crutch)
+          box-shadow 10px 10px $navy
+          width 100%
+          margin-right 0px
 
-  .interests
-    padding-left 7%
-    padding-right 7%
+          &.no-box-bottom
+            box-shadow 10px 10px $navy
+            border-right 1px solid white
 
-    @media (min-width: bp-desktop-md-min)
-      padding-left 2%
-      padding-right 2%
+  // Tabs
+  #tabs
+    padding-top 0px !important
+    padding-left 0px !important
+    padding-right 44px !important
+    border-right 1px solid white
 
-    color $coal
-    a
-      font-family Montserrat
-    a:hover
-      color $metal
-    .int-col
-      .oss
-        font-family Montserrat
-
-    .related-interests
-      text-align left
-    .not-interests
-      text-align right
-
-    h2
-      margin-bottom 7%
-      @media (min-width: bp-desktop-md-min)
-        margin-bottom 3%
-      @media (max-width: bp-tablet-max)
-        display inline
-        &::before
-          content "\00a0\00a0";
-
-    .lacroix
-      @media mq-mobile
-        width 20vw
-      @media (min-width: bp-desktop-max)
-        max-width 116px
-
-    .lacroix-pair
-      @media mq-mobile
-        font-size 15vw
-
-  .contact
-    color $canary
-    text-align center
-    a
-      font-family Montserrat
-
-    .contact-row
-      margin-top 15%
-      @media mq-desktop
-        margin-top 7%
-
-  .arrow-up
-  .arrow-down
-  .arrow-right
-  .arrow-left
-    width 0
-    height 1
-
-  .arrow-down
-  .arrow-up
-    border-left $arrowPx solid transparent
-    border-right $arrowPx solid transparent
-
-  .arrow-up-1
-    border-top $arrowPx solid $turtle
-  .arrow-up-2
-    border-top $arrowPx solid $coal
-  .arrow-up-3
-    border-top $arrowPx solid $canary
-  .arrow-down
-    border-bottom $arrowPx solid $canary
-
-  .arrow-left
-  .arrow-right
-    border-bottom $arrowPx solid transparent
-    border-top $arrowPx solid transparent
-
-  .arrow-left
-    border-right $arrowPx solid $canary
-  .arrow-right
-    border-left $arrowPx solid $canary
-
-  .abs-center
-  .abs-top
-  .abs-bottom
-    position absolute
-    margin-left auto
-    margin-right auto
-    left 0
-    right 0
-
-  .abs-top
-    top 0
-  .abs-bottom
-    bottom 0
-
-  .top-100
-    top 100%
-  .top-200
-    top 200%
-  .top-300
-    top 300%
-
-  .turtle
-    color $turtle
-  .turtle-b
-    background-color $turtle
-  .coal
-    color $coal
-  .coal-b
-    background-color $coal
-  .canary
-    color $canary
-  .canary-b
-    background-color $canary
-  .fog
-    color $fog
-  .fog-b
-    background-color $fog
-  .metal
-    color $metal
-  .metal-b
-    background-color $metal
-
-//Nav
-.topNav
-  display block
-  @media mq-mobile
     display none
-.sideNav
-  display block
+    box-shadow 10px 10px
 
+    *, *:before, *:after
+      margin 0
+      padding 0
+      box-sizing border-box
 
-//hiders
-.md-hide
-  @media (min-width: bp-desktop-md-min)
-    display none
+    line-height 1.5
+    margin 0 0 20px
+    border-left 5px solid $navy
 
-// .square
-//
-// .diamond
-//
-// .triangle
-//
-// .circle
+    input
+      display none
+
+    label
+      display inline-block
+      margin 0 0 -1px
+      padding 2%
+      font-weight 600
+      text-align center
+      color $navy
+      border 1px solid transparent
+      border-right 1px solid $mid-grey
+
+      &:hover
+        color #888
+        cursor pointer
+
+    input:checked + label
+      color $teal
+      border-right 5px solid $navy
+      border-bottom 1px solid $white
+
+    section
+      display none
+      padding-top 24px
+      border-top 1px solid $mid-grey
+
+    .tool-content
+      padding-left 24px
+
+    #tab1:checked ~ #content1,
+    #tab2:checked ~ #content2,
+    #tab3:checked ~ #content3,
+    #tab4:checked ~ #content4
+      display block
+
+  .open-source-section
+    a
+      margin 5px
+      font-size .75rem
+
+  #open-source-contributions, #open-source-starred
+    margin-top 14px
+    margin-bottom 14px
+
+@media (max-width: $crutch)
+  .siimple-tag
+    font-size $medium-font
+
+@media (max-width: $mobile)
+    body
+      padding 0 8%
+
+      header
+        .siimple-jumbotron
+          padding-top 10%
+
+        #header-title
+          margin-top 0px
+
+          span
+            &::after
+              content "";
+
+      #footer
+        .siimple-grid-col
+          margin-bottom 14px
+
+      section
+        padding-left 0px
+
+        .siimple-grid-col.siimple-grid-col--3.siimple-grid-col-md--6
+          min-height 300px
+
+      .no-tabs
+        display none
+
+      // Tabs
+      #tabs
+        display block
+        min-height 300px
+
+        .margin-bottom-5
+          margin-bottom 5px

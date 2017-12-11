@@ -1,0 +1,170 @@
+doctype.html
+//- TODO::  Experience/Res
+block vars
+
+html
+	head
+		meta(charset='UTF-8')
+		meta(content='IE=edge,chrome=1', http-equiv='X-UA-Compatible')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		title= contentTitle
+		link(rel='icon', type='image/png', href=imageUrls.icono, hreflang='en-us')
+		meta(property='og:title', content=contentTitle)
+		meta(property='og:description', content=contentDescription)
+		meta(property='og:type', content='website')
+		meta(property='og:url', content=urls.site)
+		meta(property='og:site_name', content=contentTitle)
+		meta(property='og:image', content=imageUrls.icono)
+		meta(property='og:image:width', content='1280')
+		meta(property='og:image:height', content='800')
+		meta(property='og:image:type', content='image/png')
+		meta(property='og:locale', content='en_US')
+		meta(name='keywords', content=keywords)
+		meta(name='google-site-verification', content='Pn0RIGVuq6KROeVL11fbg5kNI7IJLaio5ejL8kGFP2I')
+		meta(name='author', content=usernames.name)
+		meta(itemprop='name', content=contentTitle)
+		meta(itemprop='description', content=contentDescription)
+		meta(itemprop='image', content=imageUrls.icono)
+		meta(name='twitter:card', content='summary')
+		meta(name='twitter:url', content=urls.site)
+		meta(name='twitter:site', content=usernames.twitter)
+		meta(name='twitter:creator', content=usernames.twitter)
+		meta(name='twitter:title', content=contentTitle)
+		meta(name='twitter:description', content=contentDescription)
+		meta(name='twitter:image:src', content=imageUrls.icono)
+
+		//- Google Analytics
+		script.
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-65839374-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		script(src='js/bundle.js')
+
+	body
+		header
+			.siimple-jumbotron
+				.siimple-jumbotron-title
+					h1#header-title.big-font Yooooooo
+
+				.siimple-jumbotron-subtitle
+					blockquote.siimple-blockquote.big-font
+						div
+							| I'm&nbsp;
+							.siimple-tag.siimple-tag--grey Michael Walker
+						div
+							| a&nbsp;
+							.siimple-tag.siimple-tag--navy Software Engineer
+						div
+							| living in&nbsp;
+							.siimple-tag.siimple-tag--teal Oakland, CA
+
+				.siimple-jumbotron-detail
+					blockquote
+						.align-right
+							| currently @&nbsp;
+							a(href=urls.employer)= currentEmployer
+
+						.align-right
+							a(href="mailto:cmichaelswalker@gmail.com") Get in touch
+
+		section
+			.section-title
+				.siimple-tag.siimple-tag--teal
+					h2 Who Dis?
+			.siimple-tip.siimple-tip--teal
+				p
+					| I like front-end, I like back-end, I like to help make things engineers use.
+					| I'm a DX, UX and&nbsp;
+					a(href='https://www.youtube.com/watch?time_continue=39&v=RdGd1-90ipk') DMX
+					| &nbsp; sympathizer.
+
+				p.margin-10
+					span.bold When I'm not doing computer stuff&nbsp;
+					span I'm always&nbsp;
+					a(href="https://www.instagram.com/p/BG2SVBHy5Gg/?taken-by=huskyjeans1738&hl=en") keeping busy
+					span &nbsp; and I have lots of&nbsp;
+					a(href="https://www.instagram.com/p/BUvsZS3AATS/?taken-by=huskyjeans1738") hobbies
+
+		mixin toolLoop(data)
+			for t in data
+				- const emoji = t.emoji;
+				- const content = emoji ? t.content : t;
+				.tool-section
+					span!= emoji
+					span!= content
+
+		section
+			.section-title
+				.siimple-tag.siimple-tag--navy.no-box-bottom
+					h2 Currently Using
+			.siimple-tip.siimple-tip--navy.no-tabs
+				.siimple-grid
+					.siimple-grid-row
+						.siimple-grid-col.siimple-grid-col--3.siimple-grid-col-md--6
+							div.bold Code
+							.siimple-small
+								+toolLoop(tools.code)
+						.siimple-grid-col.siimple-grid-col--3.siimple-grid-col-md--6
+							div.bold Method
+							.siimple-small
+								+toolLoop(tools.method)
+						.siimple-grid-col.siimple-grid-col--3.siimple-grid-col-md--6
+							div.bold Data
+							.siimple-small
+								+toolLoop(tools.data)
+						.siimple-grid-col.siimple-grid-col--3.siimple-grid-col-md--6
+							div.bold Build
+							.siimple-small
+								+toolLoop(tools.build)
+
+			#tabs.siimple-tip.siimple-tip--navy.no-tabs
+				input#tab1(type='radio', name='tabs', checked='')
+				label(for='tab1') Code
+				input#tab2(type='radio', name='tabs')
+				label(for='tab2') Method
+				input#tab3(type='radio', name='tabs')
+				label(for='tab3') Data
+				input#tab4(type='radio', name='tabs')
+				label(for='tab4') Build
+				section#content1.tool-content
+				section#content2.tool-content
+				section#content3.tool-content
+				section#content4.tool-content
+
+		section.open-source-section
+			.section-title
+				.siimple-tag.siimple-tag--blue
+					h2 Contributions
+			.siimple-tip.siimple-tip--blue
+				p.bold
+					| I &nbsp;
+					i.em.em-heart_eyes
+					| &nbsp; open source. Some projects I contribute to are:
+					#open-source-contributions
+
+				p.bold
+					| and these help make my life&nbsp;
+					i.em.em-100
+					| &nbsp;times easier:
+					#open-source-starred
+
+		#footer.siimple-footer.siimple-footer--teal.siimple-footer--fluid(align='center')
+			.siimple-grid
+				.siimple-grid-row
+					.siimple-grid-col.siimple-grid-col--3.siimple-grid-col-sm--6
+						a(href=urls.github)
+							| GitHub
+					.siimple-grid-col.siimple-grid-col--3.siimple-grid-col-sm--6
+						a(href=urls.npm)
+							| NPM
+					.siimple-grid-col.siimple-grid-col--3.siimple-grid-col-sm--6
+						a(href=urls.instagram)
+							| Instagram
+					.siimple-grid-col.siimple-grid-col--3.siimple-grid-col-sm--6
+						a(href=urls.twitter)
+							| Twitter

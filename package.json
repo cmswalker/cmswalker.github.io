@@ -1,34 +1,36 @@
 {
   "name": "cmswalker.github.io",
   "version": "1.0.0",
-  "description": "full page scrolling for react",
+  "description": "personal site",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "gulp | npm run pack",
+    "pack": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "NODE_ENV=production gulp && ./bin/graphql.sh && webpack"
   },
   "author": "cmswalker",
   "license": "MIT",
   "dependencies": {
-    "fullpage-react": "^3.0.5",
-    "normalize.css": "^4.2.0",
-    "react": "^15.3.0",
-    "react-bootstrap": "^0.30.2",
-    "react-dom": "^15.3.0"
+    "siimple": "^3.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.13.0",
-    "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.13.0",
-    "babel-preset-react": "^6.11.1",
-    "classnames": "^2.2.5",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.6.1",
     "css-loader": "^0.23.1",
     "file-loader": "^0.9.0",
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-watch-pug": "^1.0.0",
+    "json-loader": "^0.5.7",
+    "pug": "^2.0.0-rc.4",
+    "pug-cli": "^1.0.0-alpha6",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.2",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.16.5"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   }
 }
