@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
+
 const { isProd } = require('./locals');
 
 module.exports = {
@@ -40,6 +42,10 @@ module.exports = {
       }
     ]
   },
+
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin()
+  ],
 
   target: 'web', // enum
   stats: 'errors-only',

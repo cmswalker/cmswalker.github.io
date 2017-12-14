@@ -7,6 +7,30 @@ require('./styles/main.styl');
 const graphQLRaw = require('../githubGraphQLAPI.json');
 const graphQLResults = parseResults(graphQLRaw);
 
+const ignoreSet = new Set([
+  'cmswalker.github.io',
+  'dawts',
+  'am',
+  'up-for-grabs.net',
+  'resume.github.com',
+  'code-problems',
+  'interview'
+]);
+
+const ignoreRegexes = [/mobile-web/, /ot-/];
+
+const isIgnored = name => {
+  const isInIgnoreSet = ignoreSet.has(name);
+
+  if (isInIgnoreSet) {
+    return true;
+  }
+
+  return !!ignoreRegexes.find(reg => {
+    return !!name.match(reg);
+  });
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     changeTitle();
     setupTabs();
@@ -65,27 +89,13 @@ function getRootInfo({ name, nameWithOwner, homepageUrl, url, description, starg
 }
 
 function generateOpenSource() {
-    const ignoreSet = new Set([
-        'cmswalker.github.io',
-        'dawts',
-        'am',
-        'mobile-web-frontend',
-        'up-for-grabs.net',
-        'resume.github.com',
-        'javascript',
-        'code-problems',
-        'interview',
-        'sanfrancisco',
-        'markdown-here'
-    ]);
-
     const $openSource = document.getElementById('open-source-contributions');
     const $starred = document.getElementById('open-source-starred');
     const dictionary = {};
 
     function generateLinks(arr) {
         return arr.filter((c) => {
-            return !ignoreSet.has(c.name) && !dictionary[c.name];
+            return !dictionary[c.name] && !isIgnored(c.name);
         }).map((c, i) => {
             const { totalCount = 0 } = c.stargazers || {}
 
