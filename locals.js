@@ -19,7 +19,8 @@ const urls = {
     twitter: 'https://twitter.com/huskyjeans1738',
     instagram: 'https://www.instagram.com/huskyjeans1738/',
     email: 'cmichaelswalker@gmail.com',
-    npm: 'https://www.npmjs.com/~cmswalker'
+    npm: 'https://www.npmjs.com/~cmswalker',
+    linkedin: 'https://www.linkedin.com/in/cmswalker/'
 };
 
 const imageUrls = {
@@ -52,7 +53,7 @@ const tools = {
         emojiBuilder('em-whale2', 'Docker'),
         emojiBuilder('em-globe_with_meridians', 'Mesos'),
         emojiBuilder('em-gift', 'Bundlers'),
-        emojiBuilder('em-curly_loop', 'CI Tools')
+        emojiBuilder('em-curly_loop', 'CI Pipelines')
     ],
     data: [
         emojiBuilder('em-leaves', 'MongoDB'),
@@ -60,17 +61,18 @@ const tools = {
         emojiBuilder('em-spider_web', 'GraphQL'),
         emojiBuilder('em-mag_right', 'Elasticsearch'),
         emojiBuilder('em-dolphin', 'MySQL'),
-        emojiBuilder('em-elephant', 'Postgres')
+        emojiBuilder('em-elephant', 'Postgres'),
+        emojiBuilder('em-handbag', 'Logstash')
     ],
     method: [
+        emojiBuilder('em-large_orange_diamond', 'Monoliths'),
+        emojiBuilder('em-small_orange_diamond', 'Microservices'),
         emojiBuilder('em-earth_africa', 'i18n'),
         emojiBuilder('em-raised_hands', 'a11y'),
         emojiBuilder('em-hand_with_index_and_middle_fingers_crossed', 'BDD'),
         emojiBuilder('em-building_construction', 'API Design'),
         emojiBuilder('em-crystal_ball', 'A|B Testing'),
-        emojiBuilder('em-female_mage', 'Compilation'),
-        emojiBuilder('em-large_orange_diamond', 'Monoliths'),
-        emojiBuilder('em-small_orange_diamond', 'Microservices')
+        emojiBuilder('em-female_mage', 'Compilation')
     ]
 };
 

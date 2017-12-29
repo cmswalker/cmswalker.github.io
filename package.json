@@ -25,11 +25,13 @@
     "gulp-watch": "^4.3.11",
     "gulp-watch-pug": "^1.0.0",
     "json-loader": "^0.5.7",
+    "ngrok": "^2.2.24",
     "pug": "^2.0.0-rc.4",
     "pug-cli": "^1.0.0-alpha6",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.2",
+    "uglifyjs-webpack-plugin": "^1.1.5",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
   }

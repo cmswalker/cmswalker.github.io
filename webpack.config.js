@@ -1,5 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const { isProd } = require('./locals');
 
@@ -44,7 +44,7 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.optimize.UglifyJsPlugin()
+    new UglifyJsPlugin()
   ],
 
   target: 'web', // enum
