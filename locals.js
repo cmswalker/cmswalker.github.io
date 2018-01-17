@@ -6,10 +6,10 @@ const keywords =
 const usernames = { name: 'Michael Walker', twitter: '@huskyjeans1738' };
 const currentEmployer = 'OpenTable';
 
-// https://rawgit.com/cmswalker/cdn/master/images/icons/windows.png
 const env = process.env.NODE_ENV || 'dev';
+const isProd = env === 'production';
+
 console.log('current env', env);
-const isProd = !!env.match(/production/);
 console.log('isProd', isProd);
 
 const urls = {
@@ -23,8 +23,22 @@ const urls = {
     linkedin: 'https://www.linkedin.com/in/cmswalker/'
 };
 
+const buildUrl = (url, commit) => {
+    const split = url.split('/blob/master');
+    let cdnUrl = ''
+
+    if (isProd) {
+        cdnUrl = split.join(`/${commit}`);
+    } else {
+        cdnUrl = split.join('/master');
+    }
+
+    console.log(cdnUrl);
+    return cdnUrl;
+}
+
 const imageUrls = {
-    icono: 'https://raw.githubusercontent.com/cmswalker/cdn/master/images/icons/windows.png'
+    icono: buildUrl('https://github.com/cmswalker/cdn/blob/master/images/icons/windows.png', '7ff9ac7e'),
 };
 
 const emojiBuilder = (emojiTag, content) => {

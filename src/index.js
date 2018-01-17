@@ -11,13 +11,13 @@ const ignoreSet = new Set([
   'cmswalker.github.io',
   'dawts',
   'am',
-  'up-for-grabs.net',
   'resume.github.com',
   'code-problems',
-  'interview'
+  'interview',
+  'cdn'
 ]);
 
-const ignoreRegexes = [/mobile-web/, /ot-/];
+const ignoreRegexes = [/mobile-web/, /ot-/, /HTH/];
 
 const isIgnored = name => {
   const isInIgnoreSet = ignoreSet.has(name);
@@ -92,26 +92,39 @@ function generateOpenSource() {
     const $openSource = document.getElementById('open-source-contributions');
     const $starred = document.getElementById('open-source-starred');
     const dictionary = {};
+    const colorPattern = ['white', 'navy', 'teal'];
+    const rootColor = colorPattern[0];
 
     function generateLinks(arr) {
         return arr.filter((c) => {
             return !dictionary[c.name] && !isIgnored(c.name);
+        }).map((c, i, arr) => {
+            let color = rootColor;
+
+            if (i < 3) {
+                if (i === 1) {
+                    color = colorPattern[i];
+                }
+
+                if (i === 2) {
+                    color = colorPattern[i];
+                }
+            } else {
+                const lastColor = arr[i - 1].color;
+                const lastColorIdx = colorPattern.indexOf(lastColor);
+
+                color = colorPattern[lastColorIdx + 1] || rootColor;
+            }
+
+            c.color = color;
+            return c;
         }).map((c, i) => {
-            const { totalCount = 0 } = c.stargazers || {}
-
-            let tagStart = 'siimple-tag siimple-tag';
-            let color = 'white'
-            let index = i + 1;
-
-            if (index && index % 2 === 0) {
-                color = 'navy'
-            }
-
-            if (index && index % 3 === 0) {
-                color = 'teal';
-            }
+            const { totalCount = 0 } = c.stargazers || {};
+            const { color } = c;
 
             dictionary[c.name] = 1;
+
+            let tagStart = 'siimple-tag siimple-tag';
 
             return `
                 <a href='${c.homepageUrl || c.url}' class='${tagStart}--${color}'>
@@ -153,7 +166,8 @@ function setupTabs() {
     });
 
     const tabSections = document.getElementsByClassName('tool-content');
-    Array.prototype.map.call(tabSections, (ts, i) => {
+
+    Array.prototype.forEach.call(tabSections, (ts, i) => {
         ts.innerHTML = toolSections[i].tools.join('\n')
     });
 }
