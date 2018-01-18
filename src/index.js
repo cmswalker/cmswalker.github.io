@@ -31,10 +31,31 @@ const isIgnored = name => {
   });
 };
 
-document.addEventListener('DOMContentLoaded', function() {
+
+const scrollTo = (element) => {
+    window.scroll({
+        behavior: 'smooth',
+        left: 0,
+        top: element.offsetTop
+    });
+}
+
+const scrollToAnchor = (id) => {
+    const element = document.getElementById(id);
+
+    if (element) {
+        scrollTo(element);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
     changeTitle();
     setupTabs();
     generateOpenSource();
+    setTimeout(() => {
+        const { hash = '' } = window.location;
+        scrollToAnchor(hash.replace('#', ''));
+    }, 500);
 });
 
 function changeTitle() {

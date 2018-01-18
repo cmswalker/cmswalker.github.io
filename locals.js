@@ -33,7 +33,6 @@ const buildUrl = (url, commit) => {
         cdnUrl = split.join('/master');
     }
 
-    console.log(cdnUrl);
     return cdnUrl;
 }
 
