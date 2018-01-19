@@ -60,7 +60,7 @@ const tools = {
     ],
     build: [
         emojiBuilder('em-fencer', 'TDD'),
-        emojiBuilder('em-black_large_square', 'Black Box Tests'),
+        emojiBuilder('em-black_large_square', 'Black Box Testing'),
         emojiBuilder('em-black_joker', 'Component Tests'),
         emojiBuilder('em-robot_face', 'Automation'),
         emojiBuilder('em-whale2', 'Docker'),

@@ -1,23 +1,50 @@
-// Global Styles
-
-require('siimple');
+require('siimple'); // Global Styles
 require('./styles/emoji.css');
+
 require('./styles/main.styl');
 
 const graphQLRaw = require('../githubGraphQLAPI.json');
+const npmRaw = require('../npmAPI.json');
+
+const convertNpmToGithub = (data) => {
+    const contributions = data.modules.map((m) => {
+        const { name } = m;
+        m.nameWithOwner = `${name}/cmswalker`;
+        m.url = `https://www.npmjs.com/package/${name}`;
+        return m;
+    });
+
+    return { contributions };
+};
+
+const npmResults = convertNpmToGithub(npmRaw);
 const graphQLResults = parseResults(graphQLRaw);
+const count = {};
+graphQLResults.contributions = [ ...graphQLResults.contributions, ...npmResults.contributions].reduce((result, current) => {
+    const { name } = current;
+    if (!count[name]) {
+        result.push(current);
+    }
+
+    count[name] = 1;
+    return result;
+}, []);
 
 const ignoreSet = new Set([
   'cmswalker.github.io',
   'dawts',
   'am',
+  'isotope',
   'resume.github.com',
   'code-problems',
   'interview',
-  'cdn'
+  'cdn',
+  'makefiles',
+  'angular-isotope',
+  'javascript'
 ]);
 
-const ignoreRegexes = [/mobile-web/, /ot-/, /HTH/];
+const ignoreRegexes = [/mobile-web/, /ot-/, /HTH/, /up-for/, /yuzu/, /awesome/];
 
 const isIgnored = name => {
   const isInIgnoreSet = ignoreSet.has(name);
@@ -148,7 +175,7 @@ function generateOpenSource() {
             let tagStart = 'siimple-tag siimple-tag';
 
             return `
-                <a href='${c.homepageUrl || c.url}' class='${tagStart}--${color}'>
+                <a target='_blank' href='${c.homepageUrl || c.url}' class='${tagStart}--${color}'>
                     <div >
                         ${c.name}
                     </div>
