@@ -13,7 +13,7 @@ console.log('current env', env);
 console.log('isProd', isProd);
 
 const urls = {
-    resume: 'https://www.dropbox.com/s/n6kqxn57vgta1jo/Resume.pdf?dl=0',
+    resume: 'https://www.dropbox.com/s/kjkrqj8yapld4if/Resume.pdf?dl=0',
     site: 'https://cmswalker.github.io',
     employer: 'https://www.opentable.com',
     github: 'https://github.com/cmswalker',
