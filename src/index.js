@@ -4,7 +4,7 @@ require('./styles/emoji.css');
 require('./styles/main.styl');
 
 const graphQLRaw = require('../githubGraphQLAPI.json');
-const npmRaw = require('../npmAPI.json');
+const npmRaw = require('../modulesAPI.json');
 
 const convertNpmToGithub = (data) => {
     const contributions = data.modules.map((m) => {
@@ -31,9 +31,11 @@ graphQLResults.contributions = [ ...graphQLResults.contributions, ...npmResults.
 }, []);
 
 const ignoreSet = new Set([
+  'my-npm-profile',
   'cmswalker.github.io',
   'dawts',
   'am',
+  'stealthy-require',
   'isotope',
   'resume.github.com',
   'code-problems',
@@ -41,20 +43,22 @@ const ignoreSet = new Set([
   'cdn',
   'makefiles',
   'angular-isotope',
-  'javascript'
+  'javascript',
+  'hyperapp',
+  'os01'
 ]);
 
-const ignoreRegexes = [/mobile-web/, /ot-/, /HTH/, /up-for/, /yuzu/, /awesome/];
+const ignoreRegexes = [/mobile-web/, /ot-/, /hth/, /up-for/, /yuzu/, /awesome/, /front/, /portal/, /gopher/];
 
 const isIgnored = name => {
-  const isInIgnoreSet = ignoreSet.has(name);
+  const isInIgnoreSet = ignoreSet.has(name.toLowerCase());
 
   if (isInIgnoreSet) {
     return true;
   }
 
   return !!ignoreRegexes.find(reg => {
-    return !!name.match(reg);
+    return !!name.toLowerCase().match(reg);
   });
 };
 
