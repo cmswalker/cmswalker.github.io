@@ -7,12 +7,11 @@
     "start": "gulp | npm run pack",
     "pack": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production gulp && ./bin/graphql.sh && node ./bin/npm-profile-aggregator.js && webpack"
+    "build": "NODE_ENV=production gulp && node ./bin/npm.js && ./bin/graphql.sh && webpack"
   },
   "author": "cmswalker",
   "license": "MIT",
   "dependencies": {
-    "npm-profile-aggregator": "^1.0.1",
     "siimple": "^3.0.0"
   },
   "devDependencies": {
@@ -27,6 +26,7 @@
     "gulp-watch-pug": "^1.0.0",
     "json-loader": "^0.5.7",
     "ngrok": "^2.2.24",
+    "npm-profile-aggregator": "^1.0.2",
     "pug": "^2.0.0-rc.4",
     "pug-cli": "^1.0.0-alpha6",
     "pug-lint": "^2.5.0",

@@ -13,7 +13,7 @@ console.log('current env', env);
 console.log('isProd', isProd);
 
 const urls = {
-    resume: 'https://www.dropbox.com/s/kjkrqj8yapld4if/Resume.pdf?dl=0',
+    resume: 'https://www.dropbox.com/s/pofjfcsxy7s4fg5/Resume.pdf?dl=0',
     site: 'https://cmswalker.github.io',
     employer: 'https://www.opentable.com',
     github: 'https://github.com/cmswalker',
@@ -38,7 +38,7 @@ const buildUrl = (url, commit) => {
 }
 
 const imageUrls = {
-    icono: buildUrl('https://github.com/cmswalker/cdn/blob/master/images/icons/windows.png', '7ff9ac7e'),
+    icono: 'js/windows.png',
 };
 
 const emojiBuilder = (emojiTag, content) => {
@@ -73,6 +73,7 @@ const tools = {
         emojiBuilder('em-leaves', 'MongoDB'),
         emojiBuilder('em-closed_book', 'Redis'),
         emojiBuilder('em-spider_web', 'GraphQL'),
+        emojiBuilder('em-rabbit2', 'RabbitMQ'),
         emojiBuilder('em-mag_right', 'Elasticsearch'),
         emojiBuilder('em-dolphin', 'MySQL'),
         emojiBuilder('em-elephant', 'Postgres'),
