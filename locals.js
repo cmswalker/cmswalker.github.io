@@ -4,7 +4,7 @@ const contentDescription =
 const keywords =
   'design, development, engineering, software engineering, frontend, backend, web, cmswalker, michael, walker, node, javascript, go, golang, C#, .net';
 const usernames = { name: 'Michael Walker', twitter: '@_huskyjeans_' };
-const currentEmployer = 'OpenTable';
+const currentEmployer = 'Pinterest';
 
 const env = process.env.NODE_ENV || 'dev';
 const isProd = env === 'production';
@@ -15,7 +15,7 @@ console.log('isProd', isProd);
 const urls = {
     resume: 'https://www.dropbox.com/s/pofjfcsxy7s4fg5/Resume.pdf?dl=0',
     site: 'https://cmswalker.github.io',
-    employer: 'https://www.opentable.com',
+    employer: 'https://www.pinterest.com',
     github: 'https://github.com/cmswalker',
     twitter: 'https://twitter.com/_huskyjeans_',
     instagram: 'https://www.instagram.com/_huskyjeans_/',
@@ -91,21 +91,6 @@ const tools = {
     ]
 };
 
-const employment = [
-    {
-        place: 'OpenTable',
-        time: 'February 2017 - Present',
-        title: 'Software Engineer'
-    },
-    {
-        place: 'Madison Reed',
-        time: 'August 2015 - Present',
-        title: 'Software Engineer'
-    }
-];
-
-const projects = [];
-
 module.exports = {
   env,
   isProd,
@@ -117,6 +102,4 @@ module.exports = {
   urls,
   imageUrls,
   tools,
-  employment,
-  projects
 };
